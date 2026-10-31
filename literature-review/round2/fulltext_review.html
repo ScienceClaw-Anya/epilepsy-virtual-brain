@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Epilepsy Virtual-Brain Full-Text Review</title>
+<style>
+:root{color-scheme:light;--ink:#16242f;--mut:#5b6b78;--line:#e2e8ee;--bg:#fff;--soft:#f5f8fb;
+--t7:#1f6fb2;--t4:#7a4fb0;--t1:#13868a;--t3:#0f9d6b;--t2:#5a52c9;--t6:#c0612a;--t5:#b0416f;--accent:#1a3a5c;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.62;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px 110px;}
+header.top{padding:46px 0 24px;border-bottom:1px solid var(--line);}
+.eyebrow{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--t7);font-weight:700;}
+h1{font-size:2.05rem;line-height:1.18;margin:.18em 0 .15em;letter-spacing:-.01em;}
+.subt{color:var(--mut);font-size:1.02rem;margin:.2em 0 1em;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 13px;
+font-size:.82rem;color:#33485a;font-weight:600;}.chip b{color:var(--accent);}
+nav.toc{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);
+border-bottom:1px solid var(--line);padding:9px 0;display:flex;flex-wrap:wrap;gap:5px;}
+nav.toc a{font-size:.84rem;font-weight:600;color:#33485a;text-decoration:none;padding:6px 11px;border-radius:8px;}
+nav.toc a:hover{background:var(--soft);color:var(--accent);}
+h2.section{font-size:1.5rem;margin:42px 0 10px;letter-spacing:-.01em;border-bottom:2px solid var(--line);padding-bottom:.25em;}
+h3.subh{font-size:.92rem;margin:24px 0 6px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;font-weight:800;}
+.prose{font-size:1rem;color:#243640;}
+.prose p{margin:.7em 0;}.prose strong{color:#0d2740;}
+.prose ul{margin:.5em 0;padding-left:1.3em;}.prose li{margin:.45em 0;}
+.prose a,.cite a,.kvv a{color:var(--t7);}
+.formula{background:#fdf4ec;border:1px solid #f0d9c4;border-left:4px solid var(--t6);border-radius:10px;
+padding:14px 16px;margin:16px 0;font-size:1.05rem;color:#7a3d18;font-weight:600;text-align:center;letter-spacing:.01em;}
+/* card */
+.card{border:1px solid var(--line);border-radius:13px;padding:16px 18px 8px;margin:14px 0;background:#fff;
+box-shadow:0 1px 2px rgba(20,40,60,.04);border-left:4px solid var(--line);}
+.card.th7b{border-left-color:var(--t7)}.card.th4b{border-left-color:var(--t4)}.card.th1b{border-left-color:var(--t1)}.card.th3b{border-left-color:var(--t3)}.card.th2b{border-left-color:var(--t2)}.card.th5b{border-left-color:var(--t5)}.card.th6b{border-left-color:var(--t6)}
+.card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;}
+.card-title{font-size:1.08rem;line-height:1.3;}
+.auth{font-weight:750;color:var(--accent);}.ttl{color:#33454f;font-weight:500;}
+.badges{display:flex;gap:6px;flex-shrink:0;align-items:center;flex-wrap:wrap;}
+.badge{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+.tier-h{background:#16324d;color:#fff;}.tier-m{background:#eef2f6;color:#475a6a;border:1px solid #d6dee6;}
+.ac-mit{background:#e7f4ec;color:#1d7a44;border:1px solid #bfe3cd;}
+.ac-oa{background:#e9f1fb;color:#1862ad;border:1px solid #c4daf3;}
+.ac-abs{background:#fdf3e2;color:#a9711a;border:1px solid #f0dcb6;}
+.thpill{font-size:.72rem;font-weight:800;color:#fff;border-radius:6px;padding:3px 8px;}
+.th7{background:var(--t7)}.th4{background:var(--t4)}.th1{background:var(--t1)}.th3{background:var(--t3)}.th2{background:var(--t2)}.th5{background:var(--t5)}.th6{background:var(--t6)}
+.cite{font-size:.86rem;color:var(--mut);margin:9px 0 12px;line-height:1.5;}
+.doilink{font-weight:600;text-decoration:none;}
+.doi{display:inline-block;font-weight:700;color:var(--t7);text-decoration:none;font-size:.8rem;
+border:1px solid #c4daf3;background:#f2f8fd;border-radius:7px;padding:2px 9px;margin-left:4px;white-space:nowrap;}
+.doi:hover{background:var(--t7);color:#fff;border-color:var(--t7);}
+.kv{margin:9px 0;}
+.kvl{display:inline-block;font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800;
+border-radius:5px;padding:2px 8px;margin-bottom:5px;}
+.kvv{font-size:.95rem;color:#22323d;}
+.conclusion{background:var(--soft);border-radius:9px;padding:11px 13px;}
+.conclusion .kvl{color:var(--t7);background:#e3eefa;}
+.conclusion .kvv{font-weight:500;color:#15303f;}
+.analysis .kvl{color:#6a4aa3;background:#f0eafa;}
+.evidence{margin-top:11px;}
+.evidence .kvl{color:#0f7378;background:#dff1f1;}
+.evidence blockquote{margin:6px 0;border-left:3px solid #cdd9e2;background:#fbfcfe;border-radius:0 8px 8px 0;
+padding:8px 13px;color:#41535f;font-style:italic;font-size:.88rem;}
+.warn{background:#fff8ec;border:1px solid #f1e2c2;border-radius:9px;padding:9px 12px;}
+.warn .kvl{color:#a9711a;background:#f7e9cd;}.warn .kvv{font-size:.9rem;color:#5b4a2c;}
+/* table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0;}
+table{border-collapse:collapse;width:100%;font-size:.86rem;min-width:680px;}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+th{background:#eef2f6;color:#16324d;font-weight:700;}
+tr:hover td{background:#f7fafc;}td a{color:var(--t7);}
+footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);color:var(--mut);font-size:.83rem;}
+@media(max-width:600px){h1{font-size:1.6rem}.card-title{font-size:1rem}}
+</style>
+<style>
+/* audit additions (verdict pills, chain list) — layered on the locked house style */
+.v{display:inline-block;font-size:.72rem;font-weight:800;padding:2px 8px;border-radius:999px;white-space:nowrap;}
+.v-ok{background:#e3f5ec;color:#16703f;border:1px solid #bfe3cd;}
+.v-part{background:#fdf3e2;color:#9a6512;border:1px solid #f0dcb6;}
+.v-bad{background:#fbe7ea;color:#a3283b;border:1px solid #f1c3cb;}
+.v-unv{background:#eef2f6;color:#475a6a;border:1px solid #d6dee6;}
+.chain{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px;}
+.chain li{border:1px solid var(--line);border-radius:10px;padding:10px 13px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start;}
+.chain .n{font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;}
+.chain .body{min-width:0;}
+td .v{margin-bottom:3px;}
+a:focus-visible{outline:2px solid var(--t7);outline-offset:2px;border-radius:4px;}
+</style>
+</head><body>
+<div class="wrap">
+
+<header class="top">
+<div class="eyebrow">Project: Epilepsy Virtual-Brain Agent Collective &middot; ScienceClaw Hackathon &middot; prepared for Nicole &middot; 31 Oct 2026 &middot; round 2</div>
+<h1>Epilepsy Virtual-Brain Full-Text Review</h1>
+<div class="subt">Round 2 of the evidence audit. 21 papers were read in full through Europe PMC and MIT access, 1,006 candidate papers were screened for work round 1 missed, and the methods sections were mined for build-ready settings. Every quote below was matched character-for-character against the downloaded full text by script.</div>
+<div class="chips">
+<span class="chip"><b>21</b> full-text primaries</span>
+<span class="chip"><b>4</b> abstract-level additions</span>
+<span class="chip"><b>1,006</b> candidates screened</span>
+<span class="chip"><b>6</b> verdicts changed</span>
+<span class="chip">6 themes</span>
+<span class="chip">0 fabricated numbers</span>
+</div></header>
+
+<nav class="toc">
+<a href="#s1">1 Summary</a>
+<a href="#s2">2 Verdict changes</a>
+<a href="#s3">3 Build sheet</a>
+<a href="#s4">4 Model &amp; cohort</a>
+<a href="#s5">5 Interventions</a>
+<a href="#s6">6 Onset &amp; hubs</a>
+<a href="#s7">7 Data &amp; scoring</a>
+<a href="#s8">8 LLMs &amp; EZ</a>
+<a href="#s9">9 Revised plan</a>
+<a href="#s10">10 Table</a>
+<a href="#s11">11 Log</a>
+</nav>
+
+<h2 class="section" id="s1">1. Executive summary</h2>
+<div class="prose">
+<p><strong>The full texts make the project more feasible but less novel than round 1 suggested.</strong> Most of the machinery the plan needs is already published with parameters you can copy. That includes the 2D-vs-6D model mismatch, simulated resection, minimal-cut interventions and a metric for "normal function". The open ground is a <strong>head-to-head benchmark of localization and intervention strategies on a shared ground truth, with per-patient adjudication</strong>. Nobody in the 1,006 screened papers has done that on VEC. Only 7 papers cite VEC so far, and none benchmarks methods on it.</p>
+<p><strong>Five findings that change what you build today:</strong></p>
+<ul>
+<li><strong>Mismatch is the field's standard practice, not a hack.</strong> The VEP pipeline itself inverts with a <strong>2D Epileptor</strong> and a simplified gain matrix (Wang 2023). VEC data come from the <strong>6D</strong> model (Dollomaja 2025). Running agents on 2D against VEC's 6D data copies the published setup, and Lemaréchal 2024 shows what to expect: "correct but degraded" accuracy, driven mostly by the simplified forward model.</li>
+<li><strong>Therapeutic stimulation has no precedent in the Epileptor family as the plan describes it.</strong> In VEC and Wang 2025, stimulation <em>accumulates toward a seizure threshold</em>: it triggers seizures. Suppression has been shown only with <strong>closed-loop linear feedback</strong> in subject-specific Epileptor networks (Moosavi 2025), where EZ-only stimulation is limited and detection latency causes a phase transition. Alternatively, use a <strong>physiological neural mass model</strong>, as Lopez-Sola 2025 argue Epileptor is too abstract for stimulation or drug effects. "Inject periodic input and watch synchrony drop" should be replaced by one of these.</li>
+<li><strong>V2's "intervention + simulated verification" is well trodden.</strong> Wang 2023 ran virtual surgeries in VEP. An 2019 defined a suppression-ratio metric and a stimulation-based safety test. Olmi 2019 showed that cutting a minimal set of links stops propagation with far fewer cuts than removing the whole EZ. Lopez-Sola 2025 simulate surgery, stimulation and three drugs in one framework. Use these as the agents' tools and cite them.</li>
+<li><strong>The Hub theory has a weak prior, so it is a good stress test.</strong> In 91 surgical patients, hubs sat in the resected area for some and in its neighbourhood for others, and this did not track outcome (Di Gaetano 2025). In An 2019, early target choices tracked node strength (r = 0.78), but final targets after safety feedback did not (r = 0.31).</li>
+<li><strong>Score like the field scores.</strong> VEP's benchmark against clinicians on 53 patients is precision 0.613, recall 0.478, AUC 0.761, average precision 0.443. EZ regions are a small minority of 162, so report AUROC <em>and</em> AUPRC (Hrtonova 2025). Use train/validation/test splits and also score regions that should be <em>preserved</em> (Bernabei 2023).</li>
+</ul>
+<p><strong>Two corrections to round 1.</strong> Bernabei 2023 states the HUP/fragility releases include electrode coordinates and resection targets across ds003029, <strong>ds003876</strong> (interictal) and ds004100. Round 1 found no electrode files in ds003029's git tree, so treat ds003029's coordinates as "possibly in sourcedata" and keep ds004100 as the V4 dataset. Also, the VEC randomized-cohort comparison (p&lt;0.0001) was run on <strong>5 of 30 patients</strong>, not the whole cohort.</p>
+</div>
+
+<h2 class="section" id="s2">2. What changed since round 1</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Claim / risk</th><th>Round 1</th><th>Round 2</th><th>Why (full text)</th></tr></thead>
+<tbody>
+<tr><td>Use 2D Epileptor on VEC data</td><td><span class="v v-part">Feasible, caveat</span></td><td><span class="v v-ok">Supported</span></td><td>VEP inversion uses a 2D Epileptor on data from richer models (Wang 2023); the degradation is quantified (Lemaréchal 2024).</td></tr>
+<tr><td>Stimulation arm: periodic input suppresses seizures</td><td><span class="v v-part">Exploratory</span></td><td><span class="v v-bad">Unsupported as designed</span></td><td>In VEC/Wang 2025, stimulation drives a slow variable <em>m</em> toward a seizure threshold. Suppression has been shown only with closed-loop feedback (Moosavi 2025) or physiological NMMs (Lopez-Sola 2025).</td></tr>
+<tr><td>V2 is "what separates us from prior work"</td><td><span class="v v-bad">Incorrect</span></td><td><span class="v v-bad">Incorrect, more so</span></td><td>Virtual surgery (Wang 2023), minimal link cuts (Olmi 2019), suppression ratio + safety (An 2019), multi-intervention simulation (Lopez-Sola 2025).</td></tr>
+<tr><td>Circularity risk (R1)</td><td><span class="v v-part">High</span></td><td><span class="v v-part">Moderate, manageable</span></td><td>Mismatched inversion is standard practice and cuts the home advantage. Clinical-hypothesis scoring is still needed.</td></tr>
+<tr><td>Hub agent has literature support</td><td><span class="v v-ok">Supported</span></td><td><span class="v v-part">Mixed</span></td><td>Hub location varies (RA vs neighbourhood) and doesn't track outcome (Di Gaetano 2025). Node strength stops predicting targets once safety is enforced (An 2019).</td></tr>
+<tr><td>VEC beats a random-EZ cohort (p&lt;0.0001)</td><td><span class="v v-ok">Supported</span></td><td><span class="v v-part">Supported, small n</span></td><td>The randomized cohort was built for 5 patients (15 simulations per hypothesis).</td></tr>
+<tr><td>LLM agents for EZ localization</td><td><span class="v v-unv">No precedent cited</span></td><td><span class="v v-ok">Precedent exists</span></td><td>Zero-shot LLMs lateralize the EZ from clinical text at 98.3–100% accuracy (Sun 2025), but VEC has no clinical text.</td></tr>
+</tbody></table></div>
+
+<h2 class="section" id="s3">3. Build sheet: settings you can copy</h2>
+<div class="prose"><p>Each row is taken from a methods section read in full; the source column says where. Parameter conventions differ between papers, so calibrate the critical x<sub>0</sub> for whichever implementation you run before trusting any result.</p></div>
+<div class="tablewrap"><table>
+<thead><tr><th>Item</th><th>Value / rule</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>VEC layout</td><td>BIDS-iEEG. ses-01 spontaneous, ses-02 stimulated seizure, ses-03 stimulated interictal. BrainVision SEEG; filenames carry <code>VEPhypothesis</code> or <code>ClinicalHypothesis</code>. Connectome as TVB zip (162×162 weights, tract lengths, centres). Gain matrix as TSV (regions × sensors). Per-run model parameters, plus source-level time series.</td><td>Dollomaja 2025, Methods</td></tr>
+<tr><td>6D Epileptor defaults</td><td>r = 0.00035, τ = 10, I<sub>ext1</sub> = 3.1, I<sub>ext2</sub> = 0.45, a = 1, a<sub>2</sub> = 6, b = 3, c = 1, d = 5, m = 0; permittivity coupling K·Σ C<sub>ij</sub>(x1<sub>j</sub> − x1<sub>i</sub>) on z</td><td>Dollomaja 2025</td></tr>
+<tr><td>EZ → x<sub>0</sub> mapping (spontaneous)</td><td>Normalized epileptogenicity → x<sub>0</sub> ∈ [−2.2, −1.2]. x<sub>0</sub> &lt; −2.062 interictal; −2.062 to −1.025 seizure-like oscillation; &gt; −1.025 stable up-state. K fitted per patient to the empirical SEEG.</td><td>Dollomaja 2025</td></tr>
+<tr><td>Stimulation model (seizure induction)</td><td><em>m</em> becomes a slow variable: ṁ = r<sub>2</sub>(k|I<sub>stim</sub>| − 0.3m); seizure when m &gt; m<sub>thresh</sub>. m<sub>thresh</sub> = 1.5, k = 20, r<sub>2</sub> = 0.006, n = 3. For stimulated runs, x<sub>0</sub> ∈ [−2.2, −2.07] and m<sub>thresh</sub> ∈ [0.5, 10] mapped from the EZ map.</td><td>Dollomaja 2025</td></tr>
+<tr><td>Integration</td><td>Euler, step 0.5 ms</td><td>Dollomaja 2025</td></tr>
+<tr><td>Alternative EZ/PZ setting</td><td>x<sub>0</sub> = −1.6 for EZ; −2.150 to −2.095 for the rest (worst-case propagation); τ<sub>0</sub> = 6667; noise SD 0.0003 on x<sub>2</sub>, y<sub>2</sub></td><td>An 2019</td></tr>
+<tr><td>2D reduction</td><td>Slow-manifold averaging of the Epileptor (fast x<sub>1</sub>, y<sub>1</sub> collapse onto z dynamics). Typical τ<sub>0</sub> = 2857, I<sub>1</sub> = 3.1. Captures recruitment and envelope, not fast discharges. Note it uses an x<sub>0</sub> sign convention different from VEC's.</td><td>Proix 2014; Wang 2023</td></tr>
+<tr><td>Efficacy metric</td><td>Suppression ratio SR = (N<sub>before</sub> − N<sub>after</sub>)/N<sub>before</sub> × 100%, where N is the number of seizure-recruited nodes</td><td>An 2019</td></tr>
+<tr><td>Normal-function ("safety") metric</td><td>Stimulate 8 resting-state seed regions for 2.5 s in a generic 2D oscillator network on the same connectome, then compare response patterns before and after the intervention</td><td>An 2019</td></tr>
+<tr><td>Cheapest-cut baseline</td><td>Linear stability analysis picks the minimal set of links to cut. Compare against removing all EZ out-links, random links, and the strongest links.</td><td>Olmi 2019</td></tr>
+<tr><td>Onset feature</td><td>Epileptogenicity Index (fast-activity energy plus onset delay). Clinical EZ threshold EI ≥ 0.4; propagation zone 0.1 &lt; EI &lt; 0.4 with sustained discharge. Compute it on 6D/SEEG signals, since 2D has no fast activity.</td><td>Bartolomei 2008; Makhalova 2022</td></tr>
+<tr><td>Localization scoring</td><td>Precision, recall and F0.5 at a fixed 0.5 threshold, plus AUC and average precision. Report AUROC together with AUPRC because of class imbalance.</td><td>Wang 2023; Hrtonova 2025</td></tr>
+<tr><td>Connectome controls</td><td>Degree- and strength-preserving shuffle (clearly worse) and healthy-control connectomes (not significantly worse)</td><td>Proix 2017</td></tr>
+<tr><td>Real-data splits</td><td>Train / validation / held-out test. Watch for spurious covariates such as channel count.</td><td>Bernabei 2023</td></tr>
+</tbody></table></div>
+
+<h2 class="section" id="s4">4. The model and the cohort <span class="thpill th2">T2</span></h2>
+<h3 class="subh">Primary entries (full text)</h3>
+
+<article class="card th2b">
+<div class="card-head"><div class="card-title"><span class="auth">Dollomaja et al. 2025</span><span class="ttl"> &mdash; VEC: what the files and parameters actually are</span></div>
+<div class="badges"><span class="thpill th2">T2</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Dollomaja B, et al. "Virtual epilepsy patient cohort: Generation and evaluation." <em>PLOS Computational Biology</em> (2025). DOI <a class="doilink" href="https://doi.org/10.1371/journal.pcbi.1012911" target="_blank" rel="noopener">10.1371/journal.pcbi.1012911</a>. <a class="doi" href="https://doi.org/10.1371/journal.pcbi.1012911" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">VEC's ground truth is an x<sub>0</sub> map with explicit regime boundaries, simulated with the 6D Epileptor at 0.5 ms Euler steps. Stimulated seizures come from a slow "tissue change" variable crossing a threshold.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Score agents on recovering which regions sit in the seizure regime (x<sub>0</sub> &gt; −2.062), not the exact x<sub>0</sub>. The stimulated-seizure model is diagnostic by construction, so stimulation in it can only make seizures more likely. The headline validation against a randomized cohort used 5 patients, so don't present it as a 30-patient result.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>For x0 values below –2.062 the model settles into a fixed point in the down-state which corresponds to an interictal state.</blockquote>
+<blockquote>In this paper, this set of differential equations is solved using an Euler integration scheme with a step size of 0.5 ms.</blockquote>
+<blockquote>We followed this procedure for 5 patients of our cohort, resulting in 15 simulated seizures for each EZ hypothesis.</blockquote>
+</div>
+</article>
+
+<article class="card th2b">
+<div class="card-head"><div class="card-title"><span class="auth">Wang HE et al. 2023</span><span class="ttl"> &mdash; VEP inverts with a 2D model; full benchmark numbers</span></div>
+<div class="badges"><span class="thpill th2">T2</span><span class="badge tier-h">High</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Wang HE, et al. "Delineating epileptogenic networks using brain imaging data and personalized modeling in drug-resistant epilepsy." <em>Science Translational Medicine</em> 15 (2023). DOI <a class="doilink" href="https://doi.org/10.1126/scitranslmed.abp8982" target="_blank" rel="noopener">10.1126/scitranslmed.abp8982</a>. <a class="doi" href="https://doi.org/10.1126/scitranslmed.abp8982" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">On 53 patients, VEP vs clinicians gave precision 0.613, recall 0.478, AUC 0.761, average precision 0.443, mean distance 5.67 mm. Inversion used a 2D Epileptor with a distance-only gain matrix.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Gives you a real benchmark row for V1 and legitimizes the 2D agent model. The paper also runs virtual surgeries: in one seizure-free patient, removing the clinical EZ alone did not stop simulated seizures, while the larger real resection was consistent with seizure freedom. That is V2, already published.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Here, the VEP inversion module was based on the NMM, with a lower dimensional model (2D Epileptor), which captures the envelope function, and a low-resolution gain matrix, which considers only the distance between the nodes and sensors (Fig. 2C).</blockquote>
+<blockquote>We also introduced two threshold-free measures: the average precision score (with mean of 0.443) and the area under receiver operating characteristic curve (with mean of 0.761).</blockquote>
+</div>
+</article>
+
+<article class="card th2b">
+<div class="card-head"><div class="card-title"><span class="auth">Lemaréchal et al. 2024</span><span class="ttl"> &mdash; a mismatch benchmark: what degrades and why</span></div>
+<div class="badges"><span class="thpill th2">T2</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Lemaréchal, Triebkorn, Vattikonda, et al. "Effects of the spatial resolution of the Virtual Epileptic Patient on the identification of epileptogenic networks." <em>Imaging Neuroscience</em> (2024). DOI <a class="doilink" href="https://doi.org/10.1162/imag_a_00153" target="_blank" rel="noopener">10.1162/imag_a_00153</a>. <a class="doi" href="https://doi.org/10.1162/imag_a_00153" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">Synthetic SEEG from an 81,942-node neural field model, inverted with the 162-node NMM, still finds the EZN, but with worse accuracy. The simplified forward model is the main cause.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">The closest published analogue to your V1 and a template for the adversary agent: they vary EZ/PZ spatial configurations deliberately. Use VEC's own gain matrix for the agents, or the forward model alone will dominate your error.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Overall, we observed correct but degraded performance when using an NMM to estimate the EZN from data simulated with an NFM, which was significant for the simplest spatial configurations.</blockquote>
+<blockquote>We quantified the reduced performance and demonstrated that the oversimplification of the forward problem is its principal cause.</blockquote>
+</div>
+</article>
+
+<article class="card th2b">
+<div class="card-head"><div class="card-title"><span class="auth">Proix et al. 2014</span><span class="ttl"> &mdash; the 2D reduction and what stimulation does in it</span></div>
+<div class="badges"><span class="thpill th2">T2</span><span class="badge tier-m">Medium</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Proix T, et al. "Permittivity coupling across brain regions determines seizure recruitment in partial epilepsy." <em>J Neurosci</em> 34(45) (2014). DOI <a class="doilink" href="https://doi.org/10.1523/JNEUROSCI.1570-14.2014" target="_blank" rel="noopener">10.1523/JNEUROSCI.1570-14.2014</a>. <a class="doi" href="https://doi.org/10.1523/JNEUROSCI.1570-14.2014" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">The 2D model comes from averaging over fast oscillations and is checked against the full system. In coupled Epileptors, stimulation can trigger a seizure, and whether it recruits a neighbour depends on that neighbour's slow state.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Fine for recruitment and spread metrics. It cannot carry fast-activity features like EI, and in this model family stimulation is a trigger, not a brake. The equations on the publisher page are images; take the 2D form from TVB's Epileptor2D and re-derive the critical x<sub>0</sub>.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Numerical analyses of the full system demonstrate that the effect of the second neuronal ensemble is negligible under this approximation, hence we neglect it in the analytical discussion also for simplicity, but verify all results against the full system numerically.</blockquote>
+<blockquote>The ability of a seizure triggered by stimulation to recruit a second Epileptor thus depends on the state of this second Epileptor.</blockquote>
+</div>
+</article>
+
+<article class="card th2b">
+<div class="card-head"><div class="card-title"><span class="auth">Proix et al. 2017</span><span class="ttl"> &mdash; patient vs control vs shuffled connectomes</span></div>
+<div class="badges"><span class="thpill th2">T2</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Proix T, Bartolomei F, Guye M, Jirsa VK. "Individual brain structure and modelling predict seizure propagation." <em>Brain</em> 140 (2017). DOI <a class="doilink" href="https://doi.org/10.1093/brain/awx004" target="_blank" rel="noopener">10.1093/brain/awx004</a>. <a class="doi" href="https://doi.org/10.1093/brain/awx004" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">In 15 patients, individual connectomes beat degree-preserving shuffles (P &lt; 0.01) but not healthy-control connectomes (higher in 9 of 15, n.s. at group level).</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Two ready-made controls. A <em>shuffled</em> connectome is the adversary's cheapest attack and should break Hub and Bottleneck. A <em>normative</em> connectome is a fair stand-in when you move to HUP, which has no DTI.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Scores obtained for the individualized connectivity matrices were higher than control subject connectivities for nine patients (Fig. 6 and Supplementary Fig. 3A), but the group level comparison did not show significant differences of the medians (Mann-Whitney U-test, Supplementary Fig. 2, control boxplot).</blockquote>
+</div>
+</article>
+
+<article class="card th2b">
+<div class="card-head"><div class="card-title"><span class="auth">Wang H et al. 2025</span><span class="ttl"> &mdash; stimulation as a diagnostic, confirmed in methods</span></div>
+<div class="badges"><span class="thpill th2">T2</span><span class="badge tier-m">Medium</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Wang H, et al. "Virtual brain twins for stimulation in epilepsy." <em>Nature Computational Science</em> (2025). DOI <a class="doilink" href="https://doi.org/10.1038/s43588-025-00841-6" target="_blank" rel="noopener">10.1038/s43588-025-00841-6</a>. <a class="doi" href="https://doi.org/10.1038/s43588-025-00841-6" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">Both SEEG and temporal-interference stimulation are modelled as building up the slow variable m until a seizure starts. Validation is on synthetic data.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Confirms the round-1 correction: cite it for the Onset agent's use of stimulated seizures, not for therapy.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Both types of stimulation generated an accumulation in the slow state variable m of the Epileptor-stimulation model (equation (1)), which represents stimulation-induced tissue changes.</blockquote>
+</div>
+</article>
+
+<h2 class="section" id="s5">5. Interventions: what is already published <span class="thpill th3">T3</span></h2>
+<h3 class="subh">Primary entries (full text)</h3>
+
+<article class="card th3b">
+<div class="card-head"><div class="card-title"><span class="auth">An et al. 2019</span><span class="ttl"> &mdash; target zones, suppression ratio, safety test</span></div>
+<div class="badges"><span class="thpill th3">T3</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">An S, Bartolomei F, Guye M, Jirsa V. "Optimization of surgical intervention outside the epileptogenic zone in the Virtual Epileptic Patient (VEP)." <em>PLOS Comput Biol</em> 15 (2019). DOI <a class="doilink" href="https://doi.org/10.1371/journal.pcbi.1007051" target="_blank" rel="noopener">10.1371/journal.pcbi.1007051</a>. <a class="doi" href="https://doi.org/10.1371/journal.pcbi.1007051" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">In 7 patients, modularity analysis picked nodes or tracts between modules. Cutting tracts disturbed normal-function simulations less than removing nodes, and node strength predicted early targets (r = 0.78) but not final ones (r = 0.31).</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Gives you the Bottleneck agent's algorithm, the efficacy metric (SR) and a safety metric. Add an "edge-cut" intervention: it is cheaper by this paper's measure and lets the collective propose something other than resection.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>The results also show that disconnecting the fiber tracts corresponding to the target edges has less impact on normal brain function than resecting the brain regions (corresponding to the target nodes).</blockquote>
+<blockquote>Meanwhile, in deriving the TZs, the frequency of the target nodes initially acquired is positively correlated with the node strength (the sum of weights of links connected with other nodes), i.e., the nodes having high strength are frequently derived as TZs (correlation coefficient: 0.7842).</blockquote>
+</div>
+</article>
+
+<article class="card th3b">
+<div class="card-head"><div class="card-title"><span class="auth">Olmi et al. 2019</span><span class="ttl"> &mdash; minimal link lesioning beats whole-EZ removal</span></div>
+<div class="badges"><span class="thpill th3">T3</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Olmi S, Petkoski S, Guye M, Bartolomei F, Jirsa V. "Controlling seizure propagation in large-scale brain networks." <em>PLOS Comput Biol</em> 15 (2019). DOI <a class="doilink" href="https://doi.org/10.1371/journal.pcbi.1006805" target="_blank" rel="noopener">10.1371/journal.pcbi.1006805</a>. <a class="doi" href="https://doi.org/10.1371/journal.pcbi.1006805" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">In 15 personalized models, links chosen by linear stability analysis stopped propagation with fewer cuts than removing all EZ out-links, random cuts, or cutting the strongest links.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">The analytic Control-theory agent, plus four ready-made baselines for V2. Report "cuts needed to stop spread" next to localization accuracy.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Targeted lesioning depicts the minimal number of links that are sufficient to be removed (pink) in order to stop the seizure, versus the total number of outgoing links from the EZs (blue) that are removed during the resection of an entire EZ.</blockquote>
+</div>
+</article>
+
+<article class="card th3b">
+<div class="card-head"><div class="card-title"><span class="auth">Moosavi et al. 2025</span><span class="ttl"> &mdash; closed-loop control of seizure spread in Epileptor networks</span></div>
+<div class="badges"><span class="thpill th3">T3</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Moosavi, Feldman, Truccolo, et al. "Controllability of nonlinear epileptic-seizure spreading dynamics in large-scale subject-specific brain networks." <em>Scientific Reports</em> (2025). DOI <a class="doilink" href="https://doi.org/10.1038/s41598-025-90632-w" target="_blank" rel="noopener">10.1038/s41598-025-90632-w</a>. <a class="doi" href="https://doi.org/10.1038/s41598-025-90632-w" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">Linear feedback stimulation can stop spread in tractography-based Epileptor networks, but stimulating the EZ alone is often not enough. Control latency causes a sharp phase transition, and extra stabilizing nodes are needed.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">The only full-text precedent for <em>therapeutic</em> stimulation in your model family. Rebuild the stimulation arm as closed-loop feedback with a latency parameter, and let the Control-theory agent choose actuator nodes. It also contrasts with Gramian/minimum-energy measures, the kind of controllability the plan proposes.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Notably, control onset latency is a critical parameter leading to a phase transition in spread controllability.</blockquote>
+<blockquote>Consequently, the efficacy of EZ-only actuation is limited depending on network excitability, coupling strength, and practical latencies for detection and actuation.</blockquote>
+</div>
+</article>
+
+<article class="card th3b">
+<div class="card-head"><div class="card-title"><span class="auth">Lopez-Sola et al. 2025</span><span class="ttl"> &mdash; surgery, stimulation and drugs in one personalized model</span></div>
+<div class="badges"><span class="thpill th3">T3</span><span class="badge tier-h">High</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Lopez-Sola E, Mercadal B, Lleal-Custey È, et al. "Personalized whole-brain models of seizure propagation." <em>J Neural Eng</em> (2025). DOI <a class="doilink" href="https://doi.org/10.1088/1741-2552/ae08e9" target="_blank" rel="noopener">10.1088/1741-2552/ae08e9</a>. <a class="doi" href="https://doi.org/10.1088/1741-2552/ae08e9" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">Physiological neural mass models (Wendling-class, with a separate model for EZ nodes) fitted to SEEG functional connectivity simulate resection, stimulation and three antiseizure drugs, and show patient-specific responses.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">If you want the "treatment" story beyond resection (stimulation, drugs), this is the model class to use. It also says why Epileptor is the wrong tool for that.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>However, their abstraction from the underlying physiology limits their use in studies requiring neurobiologically-based interpretations, such as the simulation of pharmacological effects or electrical stimulation.</blockquote>
+</div>
+</article>
+
+<article class="card th3b">
+<div class="card-head"><div class="card-title"><span class="auth">Goodfellow et al. 2016</span><span class="ttl"> &mdash; the V4 overlap analysis, done on 16 patients</span></div>
+<div class="badges"><span class="thpill th3">T3</span><span class="badge tier-m">Medium</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Goodfellow M, et al. "Estimation of brain network ictogenicity predicts outcome from epilepsy surgery." <em>Scientific Reports</em> 6 (2016). DOI <a class="doilink" href="https://doi.org/10.1038/srep29215" target="_blank" rel="noopener">10.1038/srep29215</a>. <a class="doi" href="https://doi.org/10.1038/srep29215" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">In 16 patients, overlap between model-optimal and actual resection was higher for Engel I than Engel IV patients (p &lt; 0.05).</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Copy this statistic for V4 on HUP. With 36 good and 22 poor outcomes you have more power than this paper did.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Pairwise comparisons revealed that the overlap was higher for Engel class I responders than Engel class IV responders (Wilcoxon rank-sum test, p &lt; 0.05).</blockquote>
+</div>
+</article>
+
+<article class="card th3b">
+<div class="card-head"><div class="card-title"><span class="auth">Kini et al. 2019 &middot; Lopes et al. 2017</span><span class="ttl"> &mdash; cohort sizes behind the network-surgery claims</span></div>
+<div class="badges"><span class="thpill th3">T3</span><span class="badge tier-m">Medium</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Kini LG, Bernabei JM, et al. <em>Brain</em> 142 (2019), DOI <a class="doilink" href="https://doi.org/10.1093/brain/awz303" target="_blank" rel="noopener">10.1093/brain/awz303</a> &middot; Lopes MA, et al. <em>PLOS Comput Biol</em> 13 (2017), DOI <a class="doilink" href="https://doi.org/10.1371/journal.pcbi.1005637" target="_blank" rel="noopener">10.1371/journal.pcbi.1005637</a>. <a class="doi" href="https://doi.org/10.1093/brain/awz303" target="_blank" rel="noopener">View Kini <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">Kini's AUC 0.89 comes from 28 patients (HUP and Mayo). Lopes' rich-club result comes from 16 patients (6 Engel I, 5 II, 5 IV).</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">These are small cohorts. Quote them with n attached so judges don't think the field's numbers are settled.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>validating a brain network model on a retrospective cohort of 28 patients with drug-resistant epilepsy implanted with intracranial electrodes prior to surgical resection</blockquote>
+<blockquote>Data were collected from 16 patients (11 female, mean age 31, and median post-surgical follow up 3 years) who underwent pre-surgical monitoring at Inselspital Bern [42,62].</blockquote>
+</div>
+</article>
+
+<h2 class="section" id="s6">6. Onset and hub agents <span class="thpill th1">T1</span></h2>
+<h3 class="subh">Primary entries (full text)</h3>
+
+<article class="card th1b">
+<div class="card-head"><div class="card-title"><span class="auth">Bartolomei et al. 2008</span><span class="ttl"> &mdash; the Epileptogenicity Index (missed classic)</span></div>
+<div class="badges"><span class="thpill th1">T1</span><span class="badge tier-h">High</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Bartolomei F, Chauvel P, Wendling F. "Epileptogenicity of brain structures in human temporal lobe epilepsy: a quantified study from intracerebral EEG." <em>Brain</em> 131 (2008). DOI <a class="doilink" href="https://doi.org/10.1093/brain/awn111" target="_blank" rel="noopener">10.1093/brain/awn111</a>. <a class="doi" href="https://doi.org/10.1093/brain/awn111" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">EI combines how strongly a region shifts to fast activity with how early it does so. Introduced on 17 MTLE patients, it underlies the clinical EZ labels used in VEP work (EI ≥ 0.4).</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">The citation analysis flagged this paper: seed papers keep citing it, and round 1 left it out. It is the natural Onset-agent feature and needs no Epileptor inversion, which reduces circularity. It needs fast activity, so compute it on VEC's 6D SEEG.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>This measure, called ‘Epileptogenicity Index’ (EI), is based on both spectral (appearance of fast oscillations replacing the background activity) and temporal (delay of appearance with respect to seizure onset) properties of intracerebral EEG signals.</blockquote>
+<blockquote>An EI ≥ .4 was set as a threshold to define a region as the EZN.</blockquote>
+</div>
+<div class="kv warn"><span class="kvl">Caveat</span><div class="kvv">The second quote is from Makhalova et al. 2022 (Epilepsia, DOI 10.1111/epi.17310), which applies EI to define clinical EZ labels.</div></div>
+</article>
+
+<article class="card th1b">
+<div class="card-head"><div class="card-title"><span class="auth">Li et al. 2021 &middot; Grinenko et al. 2018</span><span class="ttl"> &mdash; data-driven onset markers</span></div>
+<div class="badges"><span class="thpill th1">T1</span><span class="badge tier-m">Medium</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Li A, et al. <em>Nature Neuroscience</em> 24 (2021), DOI <a class="doilink" href="https://doi.org/10.1038/s41593-021-00901-w" target="_blank" rel="noopener">10.1038/s41593-021-00901-w</a> &middot; Grinenko, Li, Mosher, et al. "A fingerprint of the epileptogenic zone in human epilepsies." <em>Brain</em> 141 (2018; online 2017), DOI <a class="doilink" href="https://doi.org/10.1093/brain/awx306" target="_blank" rel="noopener">10.1093/brain/awx306</a>. <a class="doi" href="https://doi.org/10.1093/brain/awx306" target="_blank" rel="noopener">View Grinenko <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">Fragility was validated on 91 patients (44 successes, 47 failures). Grinenko's time-frequency fingerprint (fast activity, flattening, slow shift) addresses the hard part: telling the EZ from early propagation.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Give the Onset agent two or three interchangeable markers (EI, fragility, fingerprint) so its own internal disagreement is visible. That matches the plan's "genuine disagreement" goal without inventing theories.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>In the study population, all patients with DRE underwent invasive iEEG monitoring followed by surgical resection or laser ablation of the SOZ (44 success and 47 failure outcomes).</blockquote>
+<blockquote>Differentiating the primary epileptogenic zone from regions of propagation is difficult using fast activity signal analysis.</blockquote>
+</div>
+</article>
+
+<article class="card th1b">
+<div class="card-head"><div class="card-title"><span class="auth">Di Gaetano et al. 2025</span><span class="ttl"> &mdash; where the hubs are, and whether it matters</span></div>
+<div class="badges"><span class="thpill th1">T1</span><span class="badge tier-h">High</span><span class="badge ac-oa">Open access</span></div></div>
+<div class="cite">Di Gaetano, Santos, Battiston, et al. "Neighbourhood topology unveils pathological hubs in the brain networks of epilepsy-surgery patients." <em>Brain Communications</em> (2025). DOI <a class="doilink" href="https://doi.org/10.1093/braincomms/fcaf431" target="_blank" rel="noopener">10.1093/braincomms/fcaf431</a>. <a class="doi" href="https://doi.org/10.1093/braincomms/fcaf431" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">In MEG networks from 91 surgical patients, hubs sat either in the resected area or around it, varying by patient, and the pattern did not correlate with outcome.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Use it as the Hub agent's honest prior, and have that agent consider the RA's neighbourhood, not only the top node.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>Our analyses reveal that both the RA and its neighbourhood present large hub status, but with significant variability across patients.</blockquote>
+<blockquote>Moreover, this variability does not correlate with surgical outcome.</blockquote>
+</div>
+</article>
+
+<h2 class="section" id="s7">7. Real data and scoring <span class="thpill th5">T5</span></h2>
+<h3 class="subh">Primary entry (full text)</h3>
+
+<article class="card th5b">
+<div class="card-head"><div class="card-title"><span class="auth">Bernabei et al. 2023</span><span class="ttl"> &mdash; study-design rules and the 122-patient release</span></div>
+<div class="badges"><span class="thpill th5">T5</span><span class="badge tier-h">High</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Bernabei JM, et al. "Quantitative approaches to guide epilepsy surgery from intracranial EEG." <em>Brain</em> 146 (2023). DOI <a class="doilink" href="https://doi.org/10.1093/brain/awad007" target="_blank" rel="noopener">10.1093/brain/awad007</a>. <a class="doi" href="https://doi.org/10.1093/brain/awad007" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">The authors release 122 patients across ds003029, ds003876 and ds004100. They recommend train/validation/test splits, explicitly identifying tissue to preserve, and guarding against spurious covariates.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Three rules to adopt in V3/V4: never tune on the patients you report, score "preserved" regions (your normal-rhythm metric), and check that no agent leans on electrode count. ds003876 (interictal) is new to the plan.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>We propose that methods should be developed on a training cohort, optimized on a validation cohort, and performance quantified on a held-out test cohort to prevent overfitting to small datasets.</blockquote>
+<blockquote>The data are organized in the standardized BIDS format on OpenNeuro, in projects ds003029, ds003876, and ds004100.</blockquote>
+</div>
+<div class="kv warn"><span class="kvl">Caveat</span><div class="kvv">The paper says each dataset includes standardized electrode coordinates and surgical targets. Round 1 found no electrodes.tsv in ds003029's public tree, so check before relying on it.</div></div>
+</article>
+
+<div class="prose">
+<h3 class="subh">Abstract-level additions</h3>
+<ul>
+<li><strong>Hrtonova et al. 2025</strong>, "Metrics for evaluation of automatic epileptogenic zone localization in intracranial electrophysiology", <em>Clin Neurophysiol</em>, DOI <a href="https://doi.org/10.1016/j.clinph.2024.11.007" target="_blank" rel="noopener">10.1016/j.clinph.2024.11.007</a>. 139 patients, two centres: use AUROC and AUPRC together and report class imbalance. (Full text blocked by a site check.)</li>
+<li><strong>Penas et al. 2024</strong>, "Parameter estimation in a whole-brain network model of epilepsy: comparison of parallel global optimization solvers", <em>PLOS Comput Biol</em>, DOI <a href="https://doi.org/10.1371/journal.pcbi.1011642" target="_blank" rel="noopener">10.1371/journal.pcbi.1011642</a>. A benchmark of fitting methods for VEP models, so a ready "single-method" baseline family.</li>
+<li><strong>Saggio &amp; Jirsa 2024</strong>, "Bifurcations and bursting in the Epileptor", <em>PLOS Comput Biol</em>, DOI <a href="https://doi.org/10.1371/journal.pcbi.1011903" target="_blank" rel="noopener">10.1371/journal.pcbi.1011903</a>. Shows how to change Epileptor parameters to produce other seizure classes. Useful for the adversary to generate onset types VEC lacks.</li>
+</ul>
+</div>
+
+<h2 class="section" id="s8">8. LLMs and EZ localization <span class="thpill th6">T6</span></h2>
+<h3 class="subh">Primary entry (full text)</h3>
+
+<article class="card th6b">
+<div class="card-head"><div class="card-title"><span class="auth">Sun et al. 2025</span><span class="ttl"> &mdash; zero-shot LLMs localize the EZ from clinical text</span></div>
+<div class="badges"><span class="thpill th6">T6</span><span class="badge tier-h">High</span><span class="badge ac-mit">MIT full text</span></div></div>
+<div class="cite">Sun, Ge, Wang, et al. "Can large language models aid presurgical epileptogenic zone localization? A multisource text analysis performance study." <em>International Journal of Surgery</em> (2025). DOI <a class="doilink" href="https://doi.org/10.1097/JS9.0000000000004435" target="_blank" rel="noopener">10.1097/JS9.0000000000004435</a>. <a class="doi" href="https://doi.org/10.1097/JS9.0000000000004435" target="_blank" rel="noopener">View paper <span class="arr">&#8599;</span></a></div>
+<div class="kv conclusion"><span class="kvl">Conclusion</span><div class="kvv">GPT-4.1, Claude 3.7 Sonnet and DeepSeek-R1 (temperature 0, no fine-tuning) lateralized the EZ at 98.3–100% and reached a median lobar score of 70 in 154 seizure-free patients.</div></div>
+<div class="kv analysis"><span class="kvl">Analysis</span><div class="kvv">Real evidence that LLMs can reason about EZ localization, but from reports, at lobe level, and only in seizure-free patients (a selection bias). In your design the LLMs should orchestrate tools and argue over their outputs. They should not localize from raw signals. Say this explicitly.</div></div>
+<div class="kv evidence"><span class="kvl">Supporting evidence</span>
+<blockquote>All models achieved 98.3% accuracy in Cohort 1 and 100% in Cohort 2 for laterality.</blockquote>
+<blockquote>In lobar localization, GPT-4.1 and Claude 3.7 Sonnet achieved a median score of 70, significantly higher than Deepseek-R1’s 60 (P &lt; 0.001) in Cohort 1.</blockquote>
+</div>
+</article>
+
+<div class="prose">
+<h3 class="subh">Abstract-level addition</h3>
+<ul>
+<li><strong>Yang et al. 2026</strong>, "Epilepsy domain adapted large language models enhance epileptogenic zone prediction from seizure semiology", <em>Communications Medicine</em>, DOI <a href="https://doi.org/10.1038/s43856-026-01883-1" target="_blank" rel="noopener">10.1038/s43856-026-01883-1</a>. A fine-tuned model trained on 1,372 semiology–EZ pairs, 100 held out for evaluation.</li>
+</ul>
+</div>
+
+<h2 class="section" id="s9">9. Revised experiment plan</h2>
+<div class="prose">
+<ol class="chain">
+<li><span class="n">1</span><div class="body"><strong>Agents get published tools, not invented ones.</strong> Onset uses EI, fragility or an Epileptor fit. Hub uses strength and neighbourhood centrality. Bottleneck uses An 2019 modularity or Olmi 2019 link cuts. Control uses Moosavi 2025 feedback nodes. Greedy runs simulated search.</div></li>
+<li><span class="n">2</span><div class="body"><strong>Generator ≠ agent model.</strong> VEC 6D data, agents simulate in 2D, VEC's own gain matrix. Expect the degradation Lemaréchal 2024 reports.</div></li>
+<li><span class="n">3</span><div class="body"><strong>V1 scoring.</strong> Score against VEP and clinical hypotheses separately. Report precision/recall/F0.5 at 0.5, plus AUROC and AUPRC, with VEP's 0.613 / 0.478 / 0.761 as a reference row.</div></li>
+<li><span class="n">4</span><div class="body"><strong>V2 scoring.</strong> Suppression ratio, number of nodes or links removed, and the An 2019 safety score. Baselines: whole-EZ removal, random cuts, strongest links (Olmi 2019).</div></li>
+<li><span class="n">5</span><div class="body"><strong>Stimulation arm.</strong> Closed-loop feedback with an explicit latency sweep (Moosavi 2025), or drop it and say why. Do not use open-loop periodic input in Epileptor.</div></li>
+<li><span class="n">6</span><div class="body"><strong>Adversary.</strong> Shuffled connectome, normative connectome, alternative seizure classes (Saggio &amp; Jirsa 2024), and multifocal EZ configurations (Lemaréchal 2024).</div></li>
+<li><span class="n">7</span><div class="body"><strong>V3/V4 hygiene.</strong> Use a fixed held-out set of VEC patients for memory evaluation. On HUP ds004100, train/validation/test splits and the Goodfellow overlap-vs-Engel test.</div></li>
+</ol>
+</div>
+
+<h2 class="section" id="s10">10. Summary table: full-text numbers</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Source</th><th>Use in plan</th><th>Key number (verified in full text)</th><th>n</th></tr></thead>
+<tbody>
+<tr><td>Dollomaja 2025</td><td>Ground truth, simulator</td><td>Seizure regime −2.062 &lt; x<sub>0</sub> &lt; −1.025; Euler 0.5 ms</td><td>30 (random-cohort test: 5)</td></tr>
+<tr><td>Wang HE 2023</td><td>V1 reference</td><td>P 0.613, R 0.478, F0.5 0.573, AUC 0.761, APS 0.443</td><td>53</td></tr>
+<tr><td>Lemaréchal 2024</td><td>Mismatch expectation</td><td>Correct but degraded; forward model main cause</td><td>14</td></tr>
+<tr><td>Proix 2017</td><td>Connectome controls</td><td>Individual &gt; shuffled (P &lt; 0.01); vs controls n.s. (9/15 higher)</td><td>15</td></tr>
+<tr><td>An 2019</td><td>Bottleneck, SR, safety</td><td>Node-strength r 0.7842 → 0.3059 after feedback</td><td>7</td></tr>
+<tr><td>Olmi 2019</td><td>Minimal-cut baseline</td><td>Stability-chosen links fewest of 5 procedures</td><td>15</td></tr>
+<tr><td>Moosavi 2025</td><td>Therapeutic stimulation</td><td>Latency causes a phase transition; EZ-only actuation limited</td><td>subject-specific models</td></tr>
+<tr><td>Lopez-Sola 2025</td><td>Drugs/stimulation model class</td><td>Surgery + stimulation + 3 drugs simulated</td><td>small (figures show 3 + 3)</td></tr>
+<tr><td>Goodfellow 2016</td><td>V4 statistic</td><td>Overlap Engel I &gt; IV (p &lt; 0.05)</td><td>16</td></tr>
+<tr><td>Kini 2019</td><td>V4 baseline</td><td>AUC 0.89</td><td>28</td></tr>
+<tr><td>Li 2021</td><td>Onset marker</td><td>76% vs clinicians 48%</td><td>91 (44/47)</td></tr>
+<tr><td>Bartolomei 2008 / Makhalova 2022</td><td>Onset marker</td><td>EI; EZ if EI ≥ 0.4</td><td>17 / 53</td></tr>
+<tr><td>Di Gaetano 2025</td><td>Hub prior</td><td>Hub location varies; no outcome link</td><td>91</td></tr>
+<tr><td>Sun 2025</td><td>LLM precedent</td><td>Laterality 98.3–100%; lobar median 70</td><td>154</td></tr>
+</tbody></table></div>
+
+<h2 class="section" id="s11">11. Method and verification log</h2>
+<div class="prose">
+<ul>
+<li><strong>Full-text acquisition.</strong> 12 papers came as Europe PMC XML and 9 as publisher HTML through your MIT session (Science, Nature, OUP, J Neurosci, IOP, Ovid). Each was saved as plain text to your Downloads folder and read by line range.</li>
+<li><strong>Quote check.</strong> Every blockquote in this page was string-matched against the saved full text by script after whitespace and quote-mark normalization; results are in the footer line below.</li>
+<li><strong>Search.</strong> OpenAlex: papers citing 10 seed papers plus 13 targeted queries, giving 1,006 unique candidates. Citation tally: 19 works cited by ≥4 seeds. Two classics were missing from round 1: Bartolomei 2008 (EI) and Grinenko 2018.</li>
+<li><strong>Not reached.</strong> Hrtonova 2025 (ScienceDirect check page), Proix 2014 equation images, and the full text of Yang 2026 (abstract only). PMC served a CAPTCHA after one article, and I did not try to bypass it.</li>
+<li><strong>Round-1 items revised.</strong> The randomized-cohort test was on 5 patients. Bernabei 2023's dataset description and round 1's file-tree check of ds003029 disagree; that remains open.</li>
+<li><strong>DOIs.</strong> All new DOIs were resolved on Crossref (authors, venue, year). Grinenko is <em>Brain</em> 2018 (online 2017). Hrtonova is listed by Crossref as 2025 (DOI minted 2024).</li>
+</ul>
+</div>
+
+<footer id="vfoot">Quote check: 30 of 30 blockquotes matched the saved full texts exactly. Full texts read via Europe PMC and MIT institutional access in your Chrome; abstract-level items are labeled. All paper links resolve through <code>doi.org</code>. Research-methods review, not clinical advice.</footer>
+
+</div>
+</body></html>
