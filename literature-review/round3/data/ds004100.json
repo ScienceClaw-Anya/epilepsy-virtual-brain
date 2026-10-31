@@ -1,0 +1,56 @@
+{
+ "slug": "ds004100",
+ "name": "HUP iEEG Epilepsy Dataset",
+ "user_listed": false,
+ "grade": "A",
+ "role": [
+  "localize-benchmark",
+  "validate-surgery",
+  "build"
+ ],
+ "repo": {
+  "host": "OpenNeuro",
+  "accession": "ds004100 v1.1.3",
+  "url": "https://openneuro.org/datasets/ds004100",
+  "descriptor_doi": "10.1093/brain/awad007"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0",
+  "steps": "OpenNeuro download."
+ },
+ "cohort": {
+  "patients": 58,
+  "controls": 0,
+  "age": "16–59 (median 34); onset 0–52",
+  "sex": "31 F / 27 M",
+  "types": "SEEG 38 / ECoG 20; temporal 25, MTL 17, frontal 10; lesional 27 / non-lesional 30",
+  "sites": "1 (Hospital of the University of Pennsylvania)"
+ },
+ "modalities": "Ictal (208 runs) and interictal (111 runs) iEEG, 25.7 h; 256–1024 Hz; median 118 channels",
+ "format": "BIDS 1.4 EDF; electrodes.tsv + coordsystem.json for 57 subjects",
+ "size": "14.2 GB",
+ "labels": "channels.tsv status_description = soz / resect / resect,soz; events.tsv 'sz onset'/'sz offset' for all 208 seizures",
+ "outcomes": "Success 36 / failure 22; Engel sub-classes; therapy resection 29 / laser ablation 29",
+ "derived": "None (electrode coordinates are provided)",
+ "caveats": [
+  "coordsystem.json says fsaverage (units m) but the README says ICBM152 MNI space: check before mapping",
+  "381 of 6,921 electrode rows have n/a coordinates (scalp channels)",
+  "Possible patient overlap with PennEPI, Multi-Expert and Penn 3T-7T (same centre)"
+ ],
+ "checks": "Cloned git tree: participants (58), 57 electrodes/coordsystem files, 319 channels files, 208 events files.",
+ "pipeline": "The V4 real-surgery dataset from R1/R2: coordinates + SOZ + resected channels + Engel in one open package.",
+ "key_claim": "Open iEEG with coordinates, SOZ and resection labels per channel, and Engel outcomes for 58 patients.",
+ "evidence": [
+  {
+   "src": "repo:ds004100/README",
+   "loc": 0,
+   "quote": "Electrophysiologic data for both interictal and ictal periods is available, as are electrode localizations in ICBM152 MNI space."
+  },
+  {
+   "src": "repo:ds004100/README",
+   "loc": 0,
+   "quote": "which was rigorously determined by segmenting the resection cavity"
+  }
+ ]
+}

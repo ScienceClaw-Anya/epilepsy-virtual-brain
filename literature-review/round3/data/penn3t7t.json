@@ -1,0 +1,55 @@
+{
+ "slug": "penn3t7t",
+ "name": "Penn 3T–7T Paired Epilepsy Imaging",
+ "user_listed": false,
+ "grade": "A",
+ "role": [
+  "build",
+  "validate-surgery"
+ ],
+ "repo": {
+  "host": "Pennsieve",
+  "accession": "10.26275/aosz-hj9u (v1)",
+  "url": "https://doi.org/10.26275/aosz-hj9u",
+  "descriptor_doi": "10.1038/s41597-026-07540-5"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC BY 4.0",
+  "steps": "Pennsieve download."
+ },
+ "cohort": {
+  "patients": 30,
+  "controls": 0,
+  "age": "38.8 ± 11.7 y",
+  "sex": "18 F / 12 M",
+  "types": "drug-resistant focal epilepsy (Methods: temporal lobe epilepsy); Engel I 11, II–IV 4",
+  "sites": "1 (Penn Epilepsy Center)"
+ },
+ "modalities": "3T and 7T T1w (MPRAGE/MP2RAGE), T2w, FLAIR, resting-state fMRI (7–9 min, TR 0.5–1 s); iEEG ECoG/SEEG at 500/512/1024 Hz; post-implant CT",
+ "format": "BIDS sourcedata (NIfTI); derivatives fmriprep3T/7T, freesurfer3T/7T, ieeg-recon",
+ "size": "242 GB, 17,214 files",
+ "labels": "Ictal epochs picked from clinical notes; electrode localisation; SOZ labelling not described",
+ "outcomes": "Engel class in metadata (15 with outcome in Table 1)",
+ "derived": "fmriprep, FreeSurfer, iEEG-recon electrode maps",
+ "caveats": [
+  "No diffusion MRI",
+  "Small n (30)",
+  "Possible overlap with PennEPI and ds004100"
+ ],
+ "checks": "Pennsieve file tree walked (derivatives per subject, sourcedata sessions); full text PMC13582879. The Pennsieve page cites the Pennsieve platform paper (10.1038/s41597-025-06075-5), not a second dataset paper.",
+ "pipeline": "High-field anatomy and fMRI functional connectivity for fitting/validating network models against iEEG in the same patients.",
+ "key_claim": "30 patients with paired 3T/7T structural and resting-state fMRI plus iEEG and electrode maps; no DWI.",
+ "evidence": [
+  {
+   "src": "ft:penn37",
+   "loc": 2,
+   "quote": "We present a multimodal paired 3T and 7T MRI dataset acquired from 30 drug-resistant focal epilepsy patients (18 females, 38.8 ± 11.7 years)"
+  },
+  {
+   "src": "ft:penn37",
+   "loc": 83,
+   "quote": "The dataset can be directly downloaded from the following repository in the Pennsieve Date Management Platform"
+  }
+ ]
+}

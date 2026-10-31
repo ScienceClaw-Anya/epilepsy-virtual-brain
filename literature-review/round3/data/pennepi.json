@@ -1,0 +1,56 @@
+{
+ "slug": "pennepi",
+ "name": "PennEPI — per-patient multimodal iEEG + imaging collection",
+ "user_listed": false,
+ "grade": "A",
+ "role": [
+  "build",
+  "validate-surgery",
+  "neuromodulation"
+ ],
+ "repo": {
+  "host": "Pennsieve / epilepsy.science",
+  "accession": "Collection 10.26275/atmf-s8kb; 103 datasets PennEPI00001…",
+  "url": "https://epilepsy.science/data",
+  "descriptor_doi": ""
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC BY 4.0",
+  "steps": "Download per subject from Pennsieve Discover (agent or AWS S3; small files are directly fetchable)."
+ },
+ "cohort": {
+  "patients": 103,
+  "controls": 0,
+  "age": "adults; age at intervention in participants.tsv",
+  "sex": "54 F / 49 M",
+  "types": "MRI lesional 37 / non-lesional 31 / blank 35 (FCD 12, MTS 7…); iEEG focal 42 / non-focal 24",
+  "sites": "1 (Penn Medicine)"
+ },
+ "modalities": "Full clinical iEEG (MEF3), post-implant CT, pre-implant MRI; FreeSurfer; electrode localisation",
+ "format": "BIDS: ieeg-mef (MEF3), electrodes.tsv in MNI152NLin6ASym, channels.tsv; derivatives/freesurfer (DK, DKT, a2009s, Lausanne-2018 scales 1–5), ieeg_recon (electrodes in CT/MRI, electrodes2ROI.csv), voxtool_ct",
+ "size": "19.5 TB in total; median 145 GB per patient (29–675 GB)",
+ "labels": "Sample subject (PennEPI00004): no SOZ/resection columns in channels.tsv and an empty events file; SOZ/seizure labels not confirmed for the collection",
+ "outcomes": "Engel at 12 months for 52 and at 24 months for 47; interventions: ablation 35, resection 31, RNS 12, VNS 3, DBS 3, medication only 19",
+ "derived": "Electrode-to-ROI tables, FreeSurfer parcellations",
+ "caveats": [
+  "Very large: MEF3 needs pymef / MEF tools",
+  "Seizure and SOZ annotations not found in the sampled subject",
+  "'species' column has 33 'home sapiens' typos; free-text intervention fields"
+ ],
+ "checks": "Pennsieve API: all 103 participants.tsv read and tallied; full tree of PennEPI00004 walked; channels.tsv, events.tsv, ieeg.json read.",
+ "pipeline": "Largest open set that joins raw iEEG, electrodes placed on the patient's own parcellated MRI, and real treatments including RNS, DBS and VNS. The only open source here for neuromodulation outcomes.",
+ "key_claim": "103 adults with full clinical iEEG, MRI-registered electrodes, FreeSurfer parcellations and treatments incl. RNS/DBS/VNS (Engel for ~half).",
+ "evidence": [
+  {
+   "src": "web:pennsieve-api",
+   "loc": 0,
+   "quote": "Multimodal dataset for a single subject that underwent intracranial evaluation for medication-resistant focal epilepsy."
+  },
+  {
+   "src": "calc:pennepi_participants",
+   "loc": 0,
+   "quote": "interventions resection 31; rns 12; vns 3; ablation 35; medication 19; dbs 3"
+  }
+ ]
+}

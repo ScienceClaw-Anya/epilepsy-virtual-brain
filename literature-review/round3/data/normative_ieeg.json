@@ -1,0 +1,58 @@
+{
+ "slug": "normative_ieeg",
+ "name": "Normative iEEG atlases (MNI Open iEEG Atlas + HUP interictal and sleep/wake atlases)",
+ "user_listed": false,
+ "grade": "C",
+ "role": [
+  "prior"
+ ],
+ "repo": {
+  "host": "MNI web portal + Pennsieve",
+  "accession": "MNI atlas portal; HUP 10.26275/lzhy-ox20; sleep/wake 10.26275/xhte-d11l",
+  "url": "https://mni-open-ieegatlas.research.mcgill.ca/",
+  "descriptor_doi": "10.1093/brain/awy035"
+ },
+ "access": {
+  "tier": "Registration + Open",
+  "licence": "MNI: account; HUP atlas ODC-By; sleep/wake CC BY-NC-SA",
+  "steps": "Request an MNI account; Pennsieve download for HUP atlases."
+ },
+ "cohort": {
+  "patients": 166,
+  "controls": 0,
+  "age": "epilepsy patients, channels from presumed healthy tissue",
+  "sex": "n/a",
+  "types": "MNI: 1,772 normal channels from 106 subjects; HUP atlas merged MNI + Penn data, 166 subjects, >5,000 channels",
+  "sites": "MNI, Grenoble, CHUM (+ Penn)"
+ },
+ "modalities": "Interictal iEEG clips (60 s awake; sleep stages in later releases), normal channels only",
+ "format": "Processed clips + z-score tables; channels in common stereotaxic space",
+ "size": "HUP interictal atlas 0.3 GB; sleep/wake atlas 4.4 GB",
+ "labels": "Normal vs SOZ channels in the HUP atlas papers",
+ "outcomes": "n/a",
+ "derived": "Band power and coherence norms by region",
+ "caveats": [
+  "Channels come from epilepsy patients, not healthy people",
+  "HUP and MNI atlases partly overlap (HUP merged MNI data)"
+ ],
+ "checks": "MNI portal page; Pennsieve readmes; abstracts of Frauscher 2018 and Bernabei 2022.",
+ "pipeline": "Turns any patient's iEEG into regional z-scores: a cheap abnormality prior and a sanity check on simulated 'healthy' nodes (Bernabei 2022 AUC 0.77 for SOZ vs normal).",
+ "key_claim": "Normative regional iEEG maps (106–166 subjects) for z-scoring patient channels.",
+ "evidence": [
+  {
+   "src": "ft:abs_frauscher2018",
+   "loc": 11,
+   "quote": "A total of 1785 channels with normal brain activity from 106 patients were identified."
+  },
+  {
+   "src": "web:mni",
+   "loc": 0,
+   "quote": "1772 channels with normal brain activity from 106 subjects, registered to a common stereotaxic space"
+  },
+  {
+   "src": "ft:abs_bernabei2022",
+   "loc": 5,
+   "quote": "we aggregated interictal intracranial EEG retrospectively across 166 subjects comprising >5000 channels"
+  }
+ ]
+}

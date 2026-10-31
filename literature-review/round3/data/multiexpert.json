@@ -1,0 +1,54 @@
+{
+ "slug": "multiexpert",
+ "name": "Multi-Expert Seizure Annotation (spontaneous + stimulation-induced SEEG seizures)",
+ "user_listed": false,
+ "grade": "A",
+ "role": [
+  "localize-benchmark",
+  "stimulation"
+ ],
+ "repo": {
+  "host": "Pennsieve / epilepsy.science",
+  "accession": "10.26275/dely-fzwx (v3)",
+  "url": "https://doi.org/10.26275/dely-fzwx",
+  "descriptor_doi": ""
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC BY 4.0",
+  "steps": "Pennsieve download."
+ },
+ "cohort": {
+  "patients": 29,
+  "controls": 0,
+  "age": "adult and paediatric (19 Penn, 10 CHOP)",
+  "sex": "17 F / 12 M",
+  "types": "MTLE 18 / other 11; unifocal 19; lesional 13",
+  "sites": "2 (Penn, CHOP)"
+ },
+ "modalities": "SEEG around 78 seizures: 44 spontaneous, 34 stimulation-induced",
+ "format": "BIDS; annotations.tsv/.json at root; per-subject ses-postimplant + derivatives (electrode localisation)",
+ "size": "8.5 GB, 487 files",
+ "labels": "3–5 epileptologists per seizure: onset time, onset channels, channels seizing at 10 s, consensus columns; stimulation channels, frequency, amplitude, pulse width",
+ "outcomes": "Engel-type outcome for 22 (7 n/a), 'Device' for 4",
+ "derived": "Electrode localisations",
+ "caveats": [
+  "Small n",
+  "Patient overlap with other Penn CNT sets likely (HUP IDs)"
+ ],
+ "checks": "Pennsieve: participants.tsv (29 rows) and annotations.tsv (78 rows) read and tallied; tree walked.",
+ "pipeline": "Ground truth for onset and early-spread agents, and the only open human set pairing stimulation parameters with the seizures they induced: a direct test of the VEC 'stimulated seizure' module.",
+ "key_claim": "78 SEEG seizures (34 stimulation-induced, with stim parameters) with multi-expert consensus onset and spread labels.",
+ "evidence": [
+  {
+   "src": "web:pennsieve-api",
+   "loc": 0,
+   "quote": "We present stereotactic EEG recordings from 78 seizures (44 spontaneous, 34 stimulation-induced) across 29 patients"
+  },
+  {
+   "src": "web:pennsieve-api",
+   "loc": 0,
+   "quote": "Three or five board-certified epileptologists independently annotated each seizure for onset time, onset channels, and channels seizing at 10 seconds post-onset"
+  }
+ ]
+}

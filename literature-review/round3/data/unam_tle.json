@@ -1,0 +1,49 @@
+{
+ "slug": "unam_tle",
+ "name": "Temporal Lobe Epilepsy – UNAM (fMRI + cognition)",
+ "user_listed": false,
+ "grade": "B",
+ "role": [
+  "prior"
+ ],
+ "repo": {
+  "host": "OpenNeuro",
+  "accession": "ds004469 v1.2.0",
+  "url": "https://openneuro.org/datasets/ds004469",
+  "descriptor_doi": "10.1371/journal.pone.0295142"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0",
+  "steps": "OpenNeuro download."
+ },
+ "cohort": {
+  "patients": 39,
+  "controls": 35,
+  "age": "17–57 (median 28)",
+  "sex": "53 F / 21 M (all participants)",
+  "types": "TLE: left 19, right 12, bilateral 4, unknown 4; MTS in 17",
+  "sites": "1 (UNAM, Mexico)"
+ },
+ "modalities": "T1w; resting-state fMRI; task fMRI (Sternberg working memory); WAIS-IV / WMS-IV scores; hippocampal volumes",
+ "format": "BIDS 1.0 NIfTI",
+ "size": "7.7 GB",
+ "labels": "TLE side, MTS",
+ "outcomes": "None (no surgery data)",
+ "derived": "Hippocampal volumes in participants.tsv",
+ "caveats": [
+  "No DWI in this release",
+  "No surgical outcome",
+  "Paper analysed 31 patients; participants.tsv lists 39"
+ ],
+ "checks": "Cloned git tree; participants.tsv (74 rows) tallied; PLOS ONE abstract.",
+ "pipeline": "Minor: functional-network and cognition priors for TLE; not a model-building set.",
+ "key_claim": "Open TLE fMRI + cognition set (39 patients, 35 controls); no DWI, no outcomes.",
+ "evidence": [
+  {
+   "src": "ft:abs_fajardo2024",
+   "loc": 6,
+   "quote": "We evaluated 31 TLE patients and 35 healthy subjects through extensive cognitive testing"
+  }
+ ]
+}

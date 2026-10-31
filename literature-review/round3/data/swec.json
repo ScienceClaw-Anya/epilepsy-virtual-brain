@@ -1,0 +1,53 @@
+{
+ "slug": "swec",
+ "name": "SWEC-ETHZ long-term iEEG (BIDS release on NEMAR)",
+ "user_listed": false,
+ "grade": "B",
+ "role": [
+  "localize-benchmark",
+  "scale"
+ ],
+ "repo": {
+  "host": "NEMAR (also Hugging Face, Zenodo subset)",
+  "accession": "nm000276",
+  "url": "https://nemar.org/dataset/nm000276",
+  "descriptor_doi": ""
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CDLA-Permissive-2.0",
+  "steps": "NEMAR / Hugging Face download. Original ETH site was down on 2026-10-31."
+ },
+ "cohort": {
+  "patients": 50,
+  "controls": 0,
+  "age": "not disclosed",
+  "sex": "not disclosed",
+  "types": "pharmacoresistant epilepsy (Inselspital Bern)",
+  "sites": "1"
+ },
+ "modalities": "Continuous long-term iEEG: 6,672 h; 460 annotated seizures; 22–128 channels; 512/1024 Hz",
+ "format": "BIDS BrainVision float32 (+ HDF5 source)",
+ "size": "multi-TB",
+ "labels": "Seizure onset/duration events only",
+ "outcomes": "none",
+ "derived": "none",
+ "caveats": [
+  "No coordinates (coordsystem 'Other', x/y/z n/a), no SOZ, no outcomes, no demographics"
+ ],
+ "checks": "Cloned NEMAR git tree: participants (50), events (460 'seizure'), electrodes/coordsystem.",
+ "pipeline": "Long-horizon seizure timing and detection; not for localisation or virtual surgery.",
+ "key_claim": "Open 6,672 h of continuous iEEG with 460 seizures, but no anatomy or outcomes.",
+ "evidence": [
+  {
+   "src": "repo:nm000276/README.md",
+   "loc": 0,
+   "quote": "Total recording: 6672 hours of continuous iEEG"
+  },
+  {
+   "src": "repo:nm000276/README.md",
+   "loc": 0,
+   "quote": "Annotated electrographic seizures: 460"
+  }
+ ]
+}

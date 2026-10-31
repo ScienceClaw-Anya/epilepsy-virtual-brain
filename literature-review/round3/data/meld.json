@@ -1,0 +1,58 @@
+{
+ "slug": "meld",
+ "name": "MELD — Multi-centre Epilepsy Lesion Detection cohort + MELD Graph",
+ "user_listed": true,
+ "grade": "B",
+ "role": [
+  "prior"
+ ],
+ "repo": {
+  "host": "MELD consortium (meldproject.github.io); code on GitHub",
+  "accession": "no public accession",
+  "url": "https://meldproject.github.io/",
+  "descriptor_doi": "10.1093/brain/awac224"
+ },
+ "access": {
+  "tier": "Consortium request (data); registered tool",
+  "licence": "Data on request; MELD Graph code PolyForm Noncommercial + registration licence file",
+  "steps": "Request data access via the project website; register to obtain a MELD licence to run MELD Graph."
+ },
+ "cohort": {
+  "patients": 703,
+  "controls": 482,
+  "age": "test cohort mean 18.0 y (IQR 11–29): mostly paediatric/young adult",
+  "sex": "mixed",
+  "types": "FCD-related epilepsy",
+  "sites": "23 centres (MELD Graph); 22 in MELD FCD (618 patients + 397 controls)"
+ },
+ "modalities": "T1w (+FLAIR when available), 1.5T/3T; surface-based features",
+ "format": "34 surface-based features per vertex + manual lesion masks (not raw volumes)",
+ "size": "n/a",
+ "labels": "Manual lesion masks",
+ "outcomes": "Post-surgical outcome for 361 of 419 operated (68% Engel 1) in MELD FCD",
+ "derived": "Pre-trained MELD Graph model",
+ "caveats": [
+  "Raw MRI is not shared; data are surface features",
+  "Cohort size depends on the study: 1,015 participants (MELD FCD, 22 centres) or 1,185 (MELD Graph, 23 centres)"
+ ],
+ "checks": "Full text PMC9679165 (data availability); JAMA Neurol abstract; MELD site and meld_graph repo (licence).",
+ "pipeline": "Use the tool, not the data: run MELD Graph on IDEAS / Bonn / Penn T1+FLAIR to produce lesion maps as EZ priors.",
+ "key_claim": "Large multicentre FCD cohort available only on request; the open MELD Graph model is the usable part.",
+ "evidence": [
+  {
+   "src": "ft:meld2022",
+   "loc": 6,
+   "quote": "collated and harmonized a retrospective MRI cohort of 1015 participants, 618 patients with focal FCD-related epilepsy and 397 controls, from 22 epilepsy centres worldwide."
+  },
+  {
+   "src": "ft:meld2022",
+   "loc": 81,
+   "quote": "Requests for access to the MELD dataset can be made through the project website"
+  },
+  {
+   "src": "ft:abs_meldgraph",
+   "loc": 9,
+   "quote": "703 patients with FCD-related epilepsy and 482 controls"
+  }
+ ]
+}

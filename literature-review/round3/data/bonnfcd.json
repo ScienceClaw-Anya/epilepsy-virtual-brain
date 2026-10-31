@@ -1,0 +1,54 @@
+{
+ "slug": "bonnfcd",
+ "name": "Bonn open presurgery MRI dataset — FCD type II",
+ "user_listed": false,
+ "grade": "A",
+ "role": [
+  "build",
+  "prior"
+ ],
+ "repo": {
+  "host": "OpenNeuro",
+  "accession": "ds004199 v1.0.6",
+  "url": "https://openneuro.org/datasets/ds004199",
+  "descriptor_doi": "10.1038/s41597-023-02386-7"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0",
+  "steps": "OpenNeuro download."
+ },
+ "cohort": {
+  "patients": 85,
+  "controls": 85,
+  "age": "patients: scan 12–65 y (mean 28.9); ages binned in participants.tsv",
+  "sex": "patients 35 F / 50 M",
+  "types": "FCD type II (IIa 16, IIb 34 among operated); lobe/hemisphere labelled",
+  "sites": "1 (University Hospital Bonn)"
+ },
+ "modalities": "3D T1w + 3D FLAIR (3T)",
+ "format": "BIDS NIfTI; ROI lesion masks (85); predefined train/test split (142/28)",
+ "size": "4.2 GB",
+ "labels": "Manually drawn FCD ROI masks for all 85 patients",
+ "outcomes": "50 operated; Engel at 12 months and latest follow-up (36 Engel IA at 1 year)",
+ "derived": "None",
+ "caveats": [
+  "No DWI, no iEEG",
+  "Ages coded in bins"
+ ],
+ "checks": "Cloned git tree: participants.tsv (170 rows) and value counts; 85 roi files; full text PMC10359264.",
+ "pipeline": "Lesion-prior benchmark: test MELD Graph or an imaging agent against manual FCD masks, then feed lesions as excitability priors.",
+ "key_claim": "85 FCD II patients + 85 controls with manual lesion masks and Engel outcomes; T1/FLAIR only.",
+ "evidence": [
+  {
+   "src": "ft:bonnfcd",
+   "loc": 2,
+   "quote": "Here, we make publicly available a dataset of 85 people affected by epilepsy due to FCD type II and 85 healthy control persons."
+  },
+  {
+   "src": "repo:ds004199/README",
+   "loc": 0,
+   "quote": "Our dataset includes MRI data from T1 and FLAIR weighted images, manually labeled lesion masks, and selected clinical features."
+  }
+ ]
+}

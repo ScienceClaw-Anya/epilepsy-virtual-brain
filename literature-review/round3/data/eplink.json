@@ -1,0 +1,54 @@
+{
+ "slug": "eplink",
+ "name": "Ontario EpLink TLE multimodal cohort (Brain-CODE)",
+ "user_listed": true,
+ "grade": "B",
+ "role": [
+  "build",
+  "validate-surgery"
+ ],
+ "repo": {
+  "host": "Ontario Brain Institute Brain-CODE",
+  "accession": "Controlled release 'Multi-modal Imaging Investigations of Individuals with Temporal Lobe Epilepsy and Excisions' v1.0 (2025-12-10)",
+  "url": "https://www.braincode.ca/content/controlled-data-releases",
+  "descriptor_doi": ""
+ },
+ "access": {
+  "tier": "Controlled (approval)",
+  "licence": "Brain-CODE controlled data release terms",
+  "steps": "Register on Brain-CODE, then request access to the controlled release."
+ },
+ "cohort": {
+  "patients": 118,
+  "controls": 46,
+  "age": "adult TLE",
+  "sex": "not shown publicly",
+  "types": "temporal lobe epilepsy; 72 with excision and post-op outcomes",
+  "sites": "2 Ontario surgical centres (UHN Toronto; Western University, London)"
+ },
+ "modalities": "Structural MRI, diffusion MRI, resting-state fMRI, limited EEG, clinical, cognitive tests",
+ "format": "Not shown publicly (1,892 files)",
+ "size": "29.05 GB",
+ "labels": "Not shown publicly",
+ "outcomes": "Seizure control and memory outcomes after surgery",
+ "derived": "unknown",
+ "caveats": [
+  "No descriptor paper found; details are from the release page and OBI news",
+  "EEG is 'limited' (likely scalp)"
+ ],
+ "checks": "Brain-CODE controlled-release listing and OBI announcement (files not opened: approval needed).",
+ "pipeline": "Second build-and-validate cohort (DWI + outcomes) independent of UCLH; uniquely adds memory outcomes for a cognitive-cost term.",
+ "key_claim": "118 TLE patients (72 operated with outcomes) + 46 controls with T1/DWI/rs-fMRI; approval required.",
+ "evidence": [
+  {
+   "src": "web:obi",
+   "loc": 0,
+   "quote": "this deeply phenotyped multi-modal resource features 118 patients, including 72 with surgical outcomes, from two Ontario epilepsy surgical centers."
+  },
+  {
+   "src": "web:braincode",
+   "loc": 0,
+   "quote": "Also included are MRI scans from 46 controls from the two scanners."
+  }
+ ]
+}

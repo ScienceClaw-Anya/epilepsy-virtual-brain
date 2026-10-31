@@ -1,0 +1,61 @@
+{
+ "slug": "ideas",
+ "name": "IDEAS — Imaging Database for Epilepsy And Surgery",
+ "user_listed": true,
+ "grade": "A",
+ "role": [
+  "build",
+  "validate-surgery"
+ ],
+ "repo": {
+  "host": "OpenNeuro + figshare",
+  "accession": "ds007401 (T1w/FLAIR shared with IDEAS II); figshare for masks, FreeSurfer, clinical tables",
+  "url": "https://www.cnnp-lab.com/ideas-data",
+  "descriptor_doi": "10.1111/epi.18192"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0 (OpenNeuro)",
+  "steps": "Download from OpenNeuro / figshare links on cnnp-lab.com/ideas-data; no application."
+ },
+ "cohort": {
+  "patients": 442,
+  "controls": 100,
+  "age": "adult surgical centre; min age at surgery 16; ages shared in 5-year bins",
+  "sex": "in clinical table",
+  "types": "drug-resistant focal epilepsy; 356 TLE and 58 frontal resections among 433 masks",
+  "sites": "1 (UCLH / National Hospital for Neurology & Neurosurgery, London)"
+ },
+ "modalities": "3D T1w (all), 3D FLAIR (where available); 3T GE; FSPGR 0.94×0.94×1.1 mm or MPRAGE 1 mm",
+ "format": "BIDS NIfTI + JSON sidecars; FreeSurfer 7.3.2 recon-all outputs; region tables (DK, Lausanne multi-scale, Destrieux, HCP-MMP1, Whittaker)",
+ "size": "ds007401 is 20.5 GB in total (T1w/FLAIR for 542 subjects + DWI for 314)",
+ "labels": "Resection masks from post-operative imaging for 433/442",
+ "outcomes": "Annual ILAE outcome up to 5 years: 427 at 12 mo, 403 at 24 mo, 356 at 36 mo, 311 at 48 mo, 267 at 60 mo",
+ "derived": "FreeSurfer surfaces/volumes; thickness, area and volume tables for several parcellations",
+ "caveats": [
+  "No electrophysiology at all: no SOZ, no seizures",
+  "Resection mask is a 'silver standard' for the EZ, not ground truth",
+  "Single centre, adult resective surgery over ~20 years",
+  "Clinical table is on figshare, not in the OpenNeuro participants file (ds007401 has no participants.tsv)"
+ ],
+ "checks": "Cloned ds007401 git tree: dataset_description, README, file tree (542 sub- folders, 2066 anat files); read full text PMC11827737.",
+ "pipeline": "Patient-specific anatomy for the virtual brain plus a surgical ground truth (mask + ILAE). With IDEAS II connectomes it supports a 'virtual resection vs outcome' test on 400+ patients without any iEEG.",
+ "key_claim": "Largest open surgical-epilepsy MRI set: 442 patients with resection masks and up to 5-year ILAE outcomes, but no electrophysiology.",
+ "evidence": [
+  {
+   "src": "ft:ideas",
+   "loc": 14,
+   "quote": "We released MRI and demographic information from 442 individuals with epilepsy and 100 controls."
+  },
+  {
+   "src": "ft:ideas",
+   "loc": 25,
+   "quote": "Our final data set contains pre‐operative MRI for 442 individuals, and a resection mask for 433 of those individuals"
+  },
+  {
+   "src": "ft:ideas",
+   "loc": 47,
+   "quote": "Annual ILAE surgery outcomes of up to 5 years are shared when available."
+  }
+ ]
+}

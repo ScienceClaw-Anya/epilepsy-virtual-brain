@@ -1,0 +1,58 @@
+{
+ "slug": "epi25",
+ "name": "Epi25 whole-exome sequencing",
+ "user_listed": true,
+ "grade": "C",
+ "role": [
+  "prior"
+ ],
+ "repo": {
+  "host": "Epi25 WES browser (Broad) + dbGaP / AnVIL",
+  "accession": "dbGaP phs001489.v4.p2",
+  "url": "https://epi25.broadinstitute.org/downloads",
+  "descriptor_doi": "10.1038/s41593-024-01747-8"
+ },
+ "access": {
+  "tier": "Summary open; individual-level controlled",
+  "licence": "Browser downloads open; dbGaP disease-specific consent (DS-EPSBA…-MDS-RD), NHGRI DAC",
+  "steps": "Gene/variant results: direct download. Exomes: dbGaP Authorized Access request, data on AnVIL."
+ },
+ "cohort": {
+  "patients": 20979,
+  "controls": 33444,
+  "age": "mixed",
+  "sex": "mixed",
+  "types": "GGE, non-acquired focal epilepsy, developmental and epileptic encephalopathies, lesional focal",
+  "sites": "multiple consortia (Epi4K, EPGP, EpiPGX, …)"
+ },
+ "modalities": "Whole-exome sequencing (+ CNVs)",
+ "format": "Gene results TSV; variant results TSV/VCF; dbGaP individual data",
+ "size": "small (summary); individual exomes large",
+ "labels": "Epilepsy subtype",
+ "outcomes": "none",
+ "derived": "Gene-level burden statistics",
+ "caveats": [
+  "dbGaP holds 12,890 consented subjects, not all 20,979",
+  "No imaging or EEG: link to the virtual brain is indirect"
+ ],
+ "checks": "Nature Neurosci. abstract; Epi25 browser downloads page; dbGaP study page.",
+ "pipeline": "Genetic prior for a 'mechanism' agent (e.g. ion-channel genes → excitability parameters). Low priority for the virtual-brain build.",
+ "key_claim": "Exome summary statistics for 20,979 cases / 33,444 controls are open; individual exomes need dbGaP approval.",
+ "evidence": [
+  {
+   "src": "ft:abs_epi25",
+   "loc": 3,
+   "quote": "comprising 20,979 deeply phenotyped patients from multiple genetic ancestry groups with diverse epilepsy subtypes and 33,444 controls"
+  },
+  {
+   "src": "web:dbgap",
+   "loc": 0,
+   "quote": "Total number of consented subjects: 12890"
+  },
+  {
+   "src": "web:epi25dl",
+   "loc": 0,
+   "quote": "Epi25 variant results (VCF)"
+  }
+ ]
+}

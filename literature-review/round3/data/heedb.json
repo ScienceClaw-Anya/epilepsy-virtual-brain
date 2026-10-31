@@ -1,0 +1,55 @@
+{
+ "slug": "heedb",
+ "name": "Harvard Electroencephalography Database (HEEDB)",
+ "user_listed": true,
+ "grade": "B",
+ "role": [
+  "prior",
+  "scale"
+ ],
+ "repo": {
+  "host": "Brain Data Science Platform (bdsp.io), AWS Open Data",
+  "accession": "harvard-eeg-db (v4.1 cited in data availability)",
+  "url": "https://bdsp.io/content/harvard-eeg-db/",
+  "descriptor_doi": "10.1111/epi.18487"
+ },
+ "access": {
+  "tier": "Credentialed DUA",
+  "licence": "BDSP restricted-access DUA",
+  "steps": "Credentialed BDSP account, sign the DUA, then access via AWS (setup steps on bdsp.io)."
+ },
+ "cohort": {
+  "patients": 109177,
+  "controls": 0,
+  "age": "neonatal to 90+; median 45",
+  "sex": "51% M / 49% F",
+  "types": "all EEG indications (routine, EMU, ICU), not epilepsy-only",
+  "sites": "4: MGH 37,394; BWH 29,160; BIDMC 17,578; BCH 25,045"
+ },
+ "modalities": "Scalp EEG, 284,341 recordings (median 2 per patient) + clinical reports, ICD-10, medications, notes",
+ "format": "BIDS 1.7 EDF + _annotations.tsv + _channels.tsv + _eeg.json",
+ "size": "Not stated in the paper (hundreds of TB scale)",
+ "labels": "EEG reports for 73% of patients; NLP-extracted findings; informal technician annotations",
+ "outcomes": "EHR-derived (diagnoses, meds); no surgical outcomes",
+ "derived": "Detector tools (SpikeNet, SPaRCNet)",
+ "caveats": [
+  "Scalp EEG only: no localisation ground truth",
+  "Covers all EEG indications (routine, EMU, ICU), not only epilepsy",
+  "Patient count in text is '>108,000' / '>100,000'; the four site counts sum to 109,177"
+ ],
+ "checks": "Full text PMC12455399 (BDSP landing page not opened; access is credentialed).",
+ "pipeline": "Population prior and scale: report text + EEG pairs to ground an LLM agent's clinical reasoning, and to pretrain an EEG encoder. Not a virtual-brain input.",
+ "key_claim": "284k clinical scalp EEGs from ~109k patients with reports and EHR, behind a BDSP credentialed DUA.",
+ "evidence": [
+  {
+   "src": "ft:heedb",
+   "loc": 6,
+   "quote": "HEEDB aggregates more than 280 000 EEG recordings from more than 108 000 patients across four Harvard‐affiliated hospitals."
+  },
+  {
+   "src": "ft:heedb",
+   "loc": 97,
+   "quote": "HEEDB is classified as “restricted access,” allowing only credentialed researchers who meet specific criteria."
+  }
+ ]
+}

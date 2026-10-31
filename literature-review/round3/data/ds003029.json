@@ -1,0 +1,56 @@
+{
+ "slug": "ds003029",
+ "name": "Epilepsy-iEEG-Multicenter-Dataset (fragility cohort)",
+ "user_listed": true,
+ "grade": "B",
+ "role": [
+  "localize-benchmark",
+  "validate-outcome"
+ ],
+ "repo": {
+  "host": "OpenNeuro",
+  "accession": "ds003029 v1.0.5",
+  "url": "https://openneuro.org/datasets/ds003029",
+  "descriptor_doi": "10.1038/s41593-021-00901-w"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0",
+  "steps": "OpenNeuro download. Cleveland Clinic patients are withheld and need a separate DUA."
+ },
+ "cohort": {
+  "patients": 35,
+  "controls": 0,
+  "age": "13–59 (28 with age)",
+  "sex": "16 M / 12 F / 7 n/a",
+  "types": "drug-resistant focal epilepsy; mostly ECoG",
+  "sites": "4: NIH 14, UMMC 9, JHH 7, UMF 5"
+ },
+ "modalities": "Ictal iEEG snapshots only: 106 runs, median 241 s (8.2 h total); ~1000 Hz typical (250–2000 Hz); median 115 channels",
+ "format": "BIDS 1.4 BrainVision (.vhdr/.vmrk/.eeg); channels.tsv; events.tsv",
+ "size": "11.1 GB",
+ "labels": "Seizure onset/offset events in events.tsv (free-text marks, e.g. 'sz onset'); SOZ and resection labels are not in channels.tsv; README points to sourcedata/clinical_data_summary.xlsx",
+ "outcomes": "Success 20 / failure 10 / not resected 5; Engel and ILAE scores; 1–7 years follow-up",
+ "derived": "None",
+ "caveats": [
+  "No MRI, no electrode coordinates, no coordsystem files: cannot be placed on a virtual brain",
+  "Seizure spread/propagation is not annotated: events carry only onset/offset marks",
+  "11,015 ECoG vs 125 SEEG channel rows: SEEG-poor, unlike VEC/VEP",
+  "3,091 channels marked bad 'excel-file-labeled'"
+ ],
+ "checks": "Cloned git tree: participants.tsv (35 rows), 106 ieeg.json sidecars, 106 channels/events files, sourcedata listing. R1 found the same gaps.",
+ "pipeline": "EEG-only benchmark for the onset/fragility agent and for outcome prediction. Pair it with its companion ds003876, which carries per-channel SOZ labels. Not usable for V4 (virtual surgery), which needs coordinates.",
+ "key_claim": "Open 4-centre ictal iEEG with outcomes, but no coordinates or MRI, and SOZ labels live in an Excel sheet.",
+ "evidence": [
+  {
+   "src": "repo:ds003029/README",
+   "loc": 0,
+   "quote": "We publish 4 centers' dataset here due to data sharing issues."
+  },
+  {
+   "src": "ft:abs_li2021",
+   "loc": 5,
+   "quote": "We develop and retrospectively validate a new electroencephalogram (EEG) marker-neural fragility-in a retrospective analysis of 91 patients"
+  }
+ ]
+}

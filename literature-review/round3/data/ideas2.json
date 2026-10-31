@@ -1,0 +1,60 @@
+{
+ "slug": "ideas2",
+ "name": "IDEAS II — diffusion MRI and structural connectomes",
+ "user_listed": true,
+ "grade": "A",
+ "role": [
+  "build",
+  "validate-surgery"
+ ],
+ "repo": {
+  "host": "OpenNeuro + figshare",
+  "accession": "ds007401 v1.0.0 (raw); processed tensors/connectomes on figshare",
+  "url": "https://openneuro.org/datasets/ds007401",
+  "descriptor_doi": "10.1002/epi.70186"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0",
+  "steps": "OpenNeuro download (DataLad/AWS/CLI); processed data via figshare links."
+ },
+ "cohort": {
+  "patients": 216,
+  "controls": 98,
+  "age": "adult (IDEAS cohort)",
+  "sex": "see IDEAS table",
+  "types": "drug-resistant focal epilepsy; IDS aligned with IDEAS",
+  "sites": "1 (UCLH)"
+ },
+ "modalities": "DWI, 2 protocols: P1 (n=167, 2014–19, GE MR750, 2 mm iso); P2 (n=147, 2009–13, GE Signa HDx, b=1200 s/mm², 52 directions + 6 b0). Multishell for 98 patients and 69 controls",
+ "format": "BIDS NIfTI + .bval/.bvec; FA/MD maps native + MNI152; connectome matrices",
+ "size": "ds007401 is 20.5 GB in total (raw); 314 DWI sessions",
+ "labels": "Inherits IDEAS resection masks",
+ "outcomes": "Inherits IDEAS ILAE outcomes",
+ "derived": "80 connectivity matrices per person (det/prob tractography × Lausanne scales 36/60/125/250 × 5 weights × dilated or not); networks for 191 patients and 97 controls",
+ "caveats": [
+  "DWI and T1w sometimes from different sessions (interval <24 months in 69%)",
+  "Parcellations are Lausanne/DK, not the 162-region VEP atlas used by VEC; re-parcellate from raw for VEP",
+  "51 patients and 29 controls overlap with ENIGMA"
+ ],
+ "checks": "Cloned ds007401: 314 .bval/.bvec pairs, CC0 licence, README; full text PMC13285235.",
+ "pipeline": "The only large open source of patient-specific structural connectomes paired with resection masks and outcomes: the natural 'build' input for an Epileptor/TVB network and a virtual-surgery check.",
+ "key_claim": "Open DWI for 216 patients + 98 controls with ready connectomes for 191 patients, linked to IDEAS masks and outcomes.",
+ "evidence": [
+  {
+   "src": "ft:ideas2",
+   "loc": 16,
+   "quote": "Open diffusion MRI dataset: 216 individuals with epilepsy + 98 controls, with preprocessing and structural connectomes."
+  },
+  {
+   "src": "ft:ideas2",
+   "loc": 85,
+   "quote": "We openly share networks for 191 patients and 97 healthy controls."
+  },
+  {
+   "src": "ft:ideas2",
+   "loc": 53,
+   "quote": "In total, we therefore release 80 connectivity matrices per person"
+  }
+ ]
+}

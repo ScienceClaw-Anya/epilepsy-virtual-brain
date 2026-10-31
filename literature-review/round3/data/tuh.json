@@ -1,0 +1,48 @@
+{
+ "slug": "tuh",
+ "name": "Temple University Hospital EEG Corpus (TUEG; TUSZ subset)",
+ "user_listed": false,
+ "grade": "C",
+ "role": [
+  "prior",
+  "scale"
+ ],
+ "repo": {
+  "host": "Neural Engineering Data Consortium (isip.piconepress.com / nedcdata.org)",
+  "accession": "TUEG v0.6.0 in the descriptor; later releases larger",
+  "url": "https://isip.piconepress.com/projects/nedc/html/tuh_eeg/",
+  "descriptor_doi": "10.3389/fnins.2016.00196"
+ },
+ "access": {
+  "tier": "Registration",
+  "licence": "NEDC user agreement",
+  "steps": "Register with a valid email; download."
+ },
+ "cohort": {
+  "patients": 10874,
+  "controls": 0,
+  "age": "all ages",
+  "sex": "mixed",
+  "types": "all clinical EEG indications",
+  "sites": "1 (Temple University Hospital)"
+ },
+ "modalities": "Scalp EEG + physician reports",
+ "format": "EDF + .txt reports",
+ "size": "572 GB uncompressed (v0.6.0)",
+ "labels": "Reports; seizure annotations only in the TUSZ subset (not opened this round)",
+ "outcomes": "none",
+ "derived": "none",
+ "caveats": [
+  "Numbers are from the 2016 descriptor; current release not checked"
+ ],
+ "checks": "Full text PMC4865520.",
+ "pipeline": "Open alternative to HEEDB for EEG pretraining and seizure-detection baselines.",
+ "key_claim": "10,874 patients' clinical EEG with reports (2016 release), registration only.",
+ "evidence": [
+  {
+   "src": "ft:tuh",
+   "loc": 21,
+   "quote": "The completed corpus comprises 16,986 sessions from 10,874 unique subjects."
+  }
+ ]
+}

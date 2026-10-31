@@ -1,0 +1,54 @@
+{
+ "slug": "ds003876",
+ "name": "Epilepsy-iEEG-Interictal-Multicenter-Dataset",
+ "user_listed": false,
+ "grade": "B",
+ "role": [
+  "localize-benchmark",
+  "validate-outcome"
+ ],
+ "repo": {
+  "host": "OpenNeuro",
+  "accession": "ds003876 v1.0.2",
+  "url": "https://openneuro.org/datasets/ds003876",
+  "descriptor_doi": "10.1093/brain/awad007"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC0",
+  "steps": "OpenNeuro download."
+ },
+ "cohort": {
+  "patients": 52,
+  "controls": 0,
+  "age": "16–68",
+  "sex": "26 M / 24 F / 2 n/a",
+  "types": "drug-resistant focal epilepsy; some treated with RNS ('rns' prefix)",
+  "sites": "participants list NIH, KUMC, Miami, JHU, UMF, JHH; 39 subjects have data folders"
+ },
+ "modalities": "Interictal iEEG, 54 runs (5.8 h), tasks interictal / interictal-awake / interictal-asleep; median 128 channels; 500–2000 Hz",
+ "format": "BIDS 1.6 EDF + .mat; derivatives: HFO detection, source–sink",
+ "size": "5.5 GB",
+ "labels": "Per-channel soz / rz / epz columns: SOZ for all 39 subjects with data, resected zone for 23, EPZ for 20",
+ "outcomes": "Success 23 / failure 29; Engel 1–4; ILAE",
+ "derived": "hfo_detection, sourcesink",
+ "caveats": [
+  "No electrode coordinates",
+  "participants.tsv lists 52 people but only 39 have data folders"
+ ],
+ "checks": "Cloned git tree; counted soz/rz/epz 'yes' per subject from 54 channels.tsv files.",
+ "pipeline": "The cleanest open interictal SOZ labels (per channel, in the BIDS files). Good for an interictal onset agent and for the Bernabei 2023 train/val/test split.",
+ "key_claim": "Interictal iEEG with channel-level SOZ labels for 39 patients; no coordinates.",
+ "evidence": [
+  {
+   "src": "repo:ds003876/README",
+   "loc": 0,
+   "quote": "Some subjects, namely with the ``rns`` prefix in their subject ID were treated with RNS rather then surgical resection/ablation."
+  },
+  {
+   "src": "ft:abs_bernabei2023",
+   "loc": 8,
+   "quote": "sharing a centralized high-quality, well-annotated, multicentre dataset consisting of >100 patients"
+  }
+ ]
+}

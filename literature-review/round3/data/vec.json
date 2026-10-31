@@ -1,0 +1,55 @@
+{
+ "slug": "vec",
+ "name": "Virtual Epileptic Cohort (VEC)",
+ "user_listed": false,
+ "grade": "A",
+ "role": [
+  "build",
+  "localize-benchmark",
+  "stimulation"
+ ],
+ "repo": {
+  "host": "EBRAINS",
+  "accession": "10.25493/XWG2-S8X",
+  "url": "https://doi.org/10.25493/XWG2-S8X",
+  "descriptor_doi": "10.1371/journal.pcbi.1012911"
+ },
+ "access": {
+  "tier": "Open",
+  "licence": "CC BY 4.0 (EBRAINS free access; confirmed in R1)",
+  "steps": "EBRAINS download."
+ },
+ "cohort": {
+  "patients": 30,
+  "controls": 0,
+  "age": "binned",
+  "sex": "in Table 1",
+  "types": "drug-resistant focal epilepsy (virtualised)",
+  "sites": "Marseille (VEP programme)"
+ },
+ "modalities": "Simulated SEEG and source-level activity: spontaneous seizures, stimulation-induced seizures, interictal; region and electrode coordinates; structural connectomes",
+ "format": "iEEG-BIDS",
+ "size": "see EBRAINS card",
+ "labels": "Ground-truth EZ / propagation zone per virtual patient (the model's own parameters)",
+ "outcomes": "Resected regions available for 25 real counterparts",
+ "derived": "162-region VEP-atlas connectomes, gain matrices",
+ "caveats": [
+  "Synthetic: ground truth is the generator's, so agents tuned here can be circular (R2)",
+  "Randomised-cohort comparison was on 5 of 30 patients (R2)"
+ ],
+ "checks": "R1: EBRAINS card (free access, CC BY 4.0); R2: full text. This round: full-text data lines re-read.",
+ "pipeline": "Primary sandbox: the only set with true EZ labels, so it is where agents are developed and scored before touching real patients.",
+ "key_claim": "30 virtual patients with known EZ, simulated spontaneous and stimulated SEEG seizures, in iEEG-BIDS.",
+ "evidence": [
+  {
+   "src": "ft:vec",
+   "loc": 5,
+   "quote": "we generated and evaluated a cohort of 30 virtual epilepsy patients, using patient-specific anatomical and functional data from 30 real drug-resistant epilepsy patients."
+  },
+  {
+   "src": "ft:vec",
+   "loc": 15,
+   "quote": "Each virtual brain twin contains synthetic spontaneous seizures, stimulated seizures and interictal activity at the whole-brain level and at the SEEG level."
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "slug": "enigma",
+ "name": "ENIGMA-Epilepsy summary statistics (via ENIGMA Toolbox)",
+ "user_listed": false,
+ "grade": "C",
+ "role": [
+  "prior"
+ ],
+ "repo": {
+  "host": "GitHub MICA-MNI/ENIGMA",
+  "accession": "enigmatoolbox/datasets/summary_statistics",
+  "url": "https://github.com/MICA-MNI/ENIGMA",
+  "descriptor_doi": "10.1093/brain/awx341"
+ },
+ "access": {
+  "tier": "Open (summary only)",
+  "licence": "Toolbox open source; individual data via consortium",
+  "steps": "pip install enigmatoolbox or clone; load_summary_stats('epilepsy')."
+ },
+ "cohort": {
+  "patients": 2149,
+  "controls": 1727,
+  "age": "adults",
+  "sex": "mixed",
+  "types": "all epilepsies, GGE, left/right MTLE-HS, all-other",
+  "sites": "24 centres, 14 countries"
+ },
+ "modalities": "Derived MRI morphometry",
+ "format": "CSV: Cohen's d, SE, CI, n, p, FDR per DK region (68 cortical thickness, 16 subcortical volumes)",
+ "size": "<1 MB",
+ "labels": "n/a",
+ "outcomes": "n/a",
+ "derived": "Case–control effect sizes",
+ "caveats": [
+  "Group-level only",
+  "DK atlas"
+ ],
+ "checks": "Cloned toolbox; listed 10 epilepsy CSVs and read allepi_case-controls_CortThick.csv header.",
+ "pipeline": "Group atrophy maps as a structural prior on DK regions.",
+ "key_claim": "Open regional effect sizes from 2,149 patients vs 1,727 controls.",
+ "evidence": [
+  {
+   "src": "ft:abs_whelan2018",
+   "loc": 4,
+   "quote": "Structural brain measures were extracted from MRI brain scans across 2149 individuals with epilepsy"
+  },
+  {
+   "src": "repo:MICA-MNI_ENIGMA/enigmatoolbox/datasets/summary_statistics/allepi_case-controls_CortThick.csv",
+   "loc": 1,
+   "quote": "CorticalThickness,Structure,d_icv,se_icv,low_ci_icv,up_ci_icv,n_controls,n_patients,pobs,fdr_p"
+  }
+ ]
+}

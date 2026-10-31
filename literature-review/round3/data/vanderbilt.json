@@ -1,0 +1,55 @@
+{
+ "slug": "vanderbilt",
+ "name": "Vanderbilt Epilepsy MRI + BIEN-lab SEEG/fMRI derivatives",
+ "user_listed": false,
+ "grade": "B",
+ "role": [
+  "build",
+  "localize-benchmark"
+ ],
+ "repo": {
+  "host": "Pennsieve / epilepsy.science",
+  "accession": "MRI 10.26275/e22w-ksut; peri-ictal PDC 10.26275/n0bo-jg77; SOZ RS-SEEG 10.26275/wtaz-dbst; NBM fMRI 10.26275/wpvi-2p72",
+  "url": "https://epilepsy.science/data",
+  "descriptor_doi": "10.1093/brain/awaf215"
+ },
+ "access": {
+  "tier": "Open-NC",
+  "licence": "CC BY-NC-SA 4.0",
+  "steps": "Pennsieve download; non-commercial, share-alike."
+ },
+ "cohort": {
+  "patients": 89,
+  "controls": 106,
+  "age": "MRI set 18–68 y",
+  "sex": "in demographic CSV",
+  "types": "TLE (MRI set); drug-resistant epilepsy with SEEG (75–78 patients)",
+  "sites": "1 (Vanderbilt)"
+ },
+ "modalities": "MRI set: anatomic, functional and diffusion 3T, many with post-op scans. SEEG sets: per-seizure PDC and imaginary coherence (75 patients, 668 seizures); interictal SEEG for SOZ classification (78 patients); parcellated fMRI (75 pre-op, 34 post-op, 106 controls)",
+ "format": "MRI: BIDS-like sub-*/ses-* folders + demographic and scan-info CSVs; SEEG sets are mostly derived matrices + code",
+ "size": "MRI 52.9 GB; PDC 894.6 GB; SOZ SEEG 11.8 GB; NBM fMRI 0.1 GB",
+ "labels": "SEEG sets: SOZ / propagation zone / non-involved zone labels (per papers)",
+ "outcomes": "Not confirmed in the files opened",
+ "derived": "Connectivity matrices, fMRI time series",
+ "caveats": [
+  "Non-commercial licence",
+  "Mostly derived features, not raw SEEG",
+  "Outcome fields not checked"
+ ],
+ "checks": "Pennsieve readmes and top-level trees for all four; abstracts of Makhoul 2025 and Sundrani 2025.",
+ "pipeline": "Propagation benchmark: peri-ictal directed connectivity by SOZ / PZ / NIZ across 668 seizures is a ready target for the recruitment metric R1 recommended.",
+ "key_claim": "Large single-centre TLE MRI (89 pts incl. DWI) plus derived peri-ictal SEEG connectivity for 668 seizures; non-commercial.",
+ "evidence": [
+  {
+   "src": "web:pennsieve-api",
+   "loc": 0,
+   "quote": "This database includes anatomic, functional and diffusion 3T MRI images for 89 patients with temporal lobe epilepsy between the ages of 18 and 68 yrs."
+  },
+  {
+   "src": "ft:abs_makhoul2025",
+   "loc": 6,
+   "quote": "We computed directed connectivity from 5 s windows in the periods between, immediately before, during and after 668 seizures."
+  }
+ ]
+}
